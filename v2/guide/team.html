@@ -2,18 +2,18 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
     <head>
-        <title>Meet the Team — Vue.js</title>
+        <title>认识团队 — Vue.js</title>
         <meta charset="utf-8">
         <meta name="description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
         <meta property="og:type" content="article">
-        <meta property="og:title" content="Meet the Team — Vue.js">
+        <meta property="og:title" content="认识团队 — Vue.js">
         <meta property="og:description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
         <meta property="og:image" content="https://cn.vuejs.org//images/logo.png">
 
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:title" content="Meet the Team — Vue.js">
+        <meta name="twitter:title" content="认识团队 — Vue.js">
         <meta name="twitter:description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
         <meta name="twitter:image" content="https://cn.vuejs.org/images/logo.png">
 
@@ -584,7 +584,7 @@
         
         
         <li>
-            <a href="/v2/guide/team.html" class="sidebar-link current">Meet the Team</a>
+            <a href="/v2/guide/team.html" class="sidebar-link current">认识团队</a>
         </li>
     
     
@@ -601,7 +601,7 @@
       
     
     
-      <h1>Meet the Team</h1>
+      <h1>认识团队</h1>
     
     
     
@@ -619,7 +619,7 @@
       </h3>
       <dl>
         <template v-if="profile.reposOfficial">
-          <dt>Core focus</dt>
+          <dt>CORE FOCUS</dt>
           <dd>
             <ul>
               <li v-for="repo in profile.reposOfficial">
@@ -629,7 +629,7 @@
           </dd>
         </template>
         <template v-if="profile.github && profile.reposPersonal">
-          <dt>Ecosystem</dt>
+          <dt>ECOSYSTEM</dt>
           <dd>
             <ul>
               <li v-for="repo in profile.reposPersonal">
@@ -671,20 +671,20 @@
 
 <div id="team-members">
   <div class="team">
-    <h2 id="the-core-team">The Core Team</h2>
+    <h2 id="the-core-team">核心团队</h2>
 
     <p>
-      The development of Vue and its ecosystem is guided by an international team, some of whom have chosen to be featured below.
+      Vue 的研发及其生态建设出自一个国际化的团队，这里会展示其中部分团队成员的信息。
     </p>
 
     <vuer-profile v-for="profile in team" :key="profile.github" :profile="profile"></vuer-profile>
   </div>
 
   <div class="team">
-    <h2 id="community-partners">Community Partners</h2>
+    <h2 id="community-partners">社区伙伴</h2>
 
     <p>
-      Some members of the Vue community have so enriched it, that they deserve special mention. We've developed a more intimate relationship with these key partners, often coordinating with them on upcoming features and news.
+      一些 Vue 的社区成员让这里变得更加丰富多彩，有必要在此特别提及。我们与这些主要合作伙伴建立了更加亲密的关系，经常与他们就即将到来的功能和新闻展开协作。
     </p>
 
     <vuer-profile v-for="profile in partners" :key="profile.github" :profile="profile"></vuer-profile>
