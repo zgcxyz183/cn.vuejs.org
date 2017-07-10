@@ -164,8 +164,6 @@ p {
 }
 a.button {
   padding: 0.75em 2em;
-  min-width: 8em;
-  text-align: center;
   border-radius: 2em;
   display: inline-block;
   color: #fff;
@@ -658,6 +656,8 @@ body {
   font-size: 1.05em;
   font-weight: 600;
   letter-spacing: 0.1em;
+  min-width: 8em;
+  text-align: center;
 }
 #hero .button:first-child {
   margin-right: 1em;
