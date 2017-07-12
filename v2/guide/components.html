@@ -4,17 +4,17 @@
     <head>
         <title>组件 — Vue.js</title>
         <meta charset="utf-8">
-        <meta name="description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
+        <meta name="description" content="Vue.js - The Progressive JavaScript Framework">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
         <meta property="og:type" content="article">
         <meta property="og:title" content="组件 — Vue.js">
-        <meta property="og:description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
+        <meta property="og:description" content="Vue.js - The Progressive JavaScript Framework">
         <meta property="og:image" content="https://cn.vuejs.org//images/logo.png">
 
         <meta name="twitter:card" content="summary">
         <meta name="twitter:title" content="组件 — Vue.js">
-        <meta name="twitter:description" content="Vue.js - Intuitive, Fast and Composable MVVM for building interactive interfaces.">
+        <meta name="twitter:description" content="Vue.js - The Progressive JavaScript Framework">
         <meta name="twitter:image" content="https://cn.vuejs.org/images/logo.png">
 
         <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
@@ -785,7 +785,7 @@ new Vue({
 <li>Symbol</li>
 </ul>
 <p><code>type</code> 也可以是一个自定义构造器函数，使用 <code>instanceof</code> 检测。</p>
-<p>当 prop 验证失败，Vue 会在抛出警告 (如果使用的是开发版本)。注意 props 会在组件示例创建<strong>之前</strong>进行校验，所以在 <code>default</code> 或 <code>validator</code> 函数里，诸如 <code>data</code>、<code>computed</code> 或 <code>methods</code> 的示例属性还无法使用。</p>
+<p>当 prop 验证失败，Vue 会在抛出警告 (如果使用的是开发版本)。注意 props 会在组件实例创建<strong>之前</strong>进行校验，所以在 <code>default</code> 或 <code>validator</code> 函数里，诸如 <code>data</code>、<code>computed</code> 或 <code>methods</code> 等实例属性还无法使用。</p>
 <h2 id="非-Prop-属性"><a href="#非-Prop-属性" class="headerlink" title="非 Prop 属性"></a>非 Prop 属性</h2><p>所谓非 <code>prop</code> 属性，就是它可以直接传入组件，而不需要定义相应的 <code>prop</code>。</p>
 <p>明确给组件定义 <code>prop</code> 是传参的推荐方式，但组件的作者并不总能预见到组件被使用的场景。所以，组件可以接收任意传入的属性，这些属性都会被添加到组件的根元素上。</p>
 <p>例如，第三方组件 <code>bs-date-input</code>，当它要和一个 Bootstrap 插件互操作时，需要在这个第三方组件的 input 上添加 <code>data-3d-date-picker</code> 属性，这时可以把属性直接添加到组件上 (不需要事先定义 <code>prop</code>)：</p>
@@ -800,7 +800,7 @@ new Vue({
 <li><code>form-control</code>，来自组件的模板</li>
 <li><code>date-picker-theme-dark</code>，从父组件传进来的</li>
 </ul>
-<p>对于多数特性来说，传递给组件的值会提到组件本身设定的值。即例如传递 <code>type=&quot;large&quot;</code> 将会替换 <code>type=&quot;date&quot;</code> 且有可能破坏该组件！索性我们对待 <code>class</code> 和 <code>style</code> 特性会更聪明一些，这两个特性的值都会做覆盖 (merge) 操作，让最终生成的值为：<code>form-control date-picker-theme-dark</code>。</p>
+<p>对于多数特性来说，传递给组件的值会覆盖组件本身设定的值。即例如传递 <code>type=&quot;large&quot;</code> 将会覆盖 <code>type=&quot;date&quot;</code> 且有可能破坏该组件！索性我们对待 <code>class</code> 和 <code>style</code> 特性会更聪明一些，这两个特性的值都会做合并 (merge) 操作，让最终生成的值为：<code>form-control date-picker-theme-dark</code>。</p>
 <h2 id="自定义事件"><a href="#自定义事件" class="headerlink" title="自定义事件"></a>自定义事件</h2><p>我们知道，父组件是使用 props 传递数据给子组件，但如果子组件要把数据传递回去，应该怎样做？那就是自定义事件！</p>
 <h3 id="使用-v-on-绑定自定义事件"><a href="#使用-v-on-绑定自定义事件" class="headerlink" title="使用 v-on 绑定自定义事件"></a>使用 <code>v-on</code> 绑定自定义事件</h3><p>每个 Vue 实例都实现了<a href="../api/#实例方法-事件">事件接口 (Events interface)</a>，即：</p>
 <ul>
