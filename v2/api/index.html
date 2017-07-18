@@ -7,6 +7,14 @@
         <meta name="description" content="Vue.js - The Progressive JavaScript Framework">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
+        <link rel="alternate" hreflang="x-default" href="https://vuejs.org/v2/api/index.html">
+        <link rel="alternate" hreflang="zh" href="https://cn.vuejs.org/v2/api/index.html">
+        <link rel="alternate" hreflang="ja" href="https://jp.vuejs.org/v2/api/index.html">
+        <link rel="alternate" hreflang="ru" href="https://ru.vuejs.org/v2/api/index.html">
+        <link rel="alternate" hreflang="ko" href="https://kr.vuejs.org/v2/api/index.html">
+        <link rel="alternate" hreflang="pt-BR" href="https://br.vuejs.org/v2/api/index.html">
+        <link rel="alternate" hreflang="fr" href="https://fr.vuejs.org/v2/api/index.html">
+
         <meta property="og:type" content="article">
         <meta property="og:title" content="Vue.js">
         <meta property="og:description" content="Vue.js - The Progressive JavaScript Framework">
@@ -398,8 +406,11 @@
 <li><p><strong>参数：</strong></p>
 <ul>
 <li><code>{Object | Array} target</code></li>
-<li><code>{string | number} key</code></li>
+<li><code>{string | number} key/index</code></li>
 </ul>
+<blockquote>
+<p>仅在 2.2.0+ 版本中支持 Array + index 用法。</p>
+</blockquote>
 </li>
 <li><p><strong>用法：</strong></p>
 <p>删除对象的属性。如果对象是响应式的，确保删除能触发更新视图。这个方法主要用于避开 Vue 不能检测到属性被删除的限制，但是你应该很少会使用它。</p>
