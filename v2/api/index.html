@@ -202,8 +202,8 @@
         <div class="list">
             <div class="main-sponsor">
                 <span>赞助者</span><br>
-                <a href="https://console.upyun.com/register/?invite=H124C2iMZ&utm_source=vue&utm_medium=ad&utm_content=con" target="_blank">
-                    <img src="/images/upyun-main.jpg">
+                <a href="https://cn.100offer.com/how-it-works/?utm_source=vuejs&utm_medium=display&utm_campaign=vuejs_20170704&utm_content=find_new_job&campaign_code=vuejs" target="_blank">
+                    <img src="/images/100offer-main.png">
                 </a>
             </div>
             <a class="become-backer" href="/support-vuejs">
@@ -279,8 +279,8 @@
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.config.errorHandler = <span class="function"><span class="keyword">function</span> (<span class="params">err, vm, info</span>) </span>&#123;</div><div class="line">  <span class="comment">// handle error</span></div><div class="line">  <span class="comment">// `info` 是 Vue 特定的错误信息，比如错误所在的生命周期钩子</span></div><div class="line">  <span class="comment">// 只在 2.2.0+ 可用</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>指定组件的渲染和观察期间未捕获错误的处理函数。这个处理函数被调用时，可获取错误信息和 Vue 实例。</p>
 <blockquote>
-<p>在 2.2.0 中，这个钩子也会捕获组件生命周期钩子里的错误。同样的，当这个钩子是 <code>undefined</code> 时，被捕获的错误会通过 <code>console.error</code> 输出而避免应用崩溃。</p>
-<p>在 2.4.0 中这个钩子也会捕获 Vue 自定义事件句柄内部的错误了。</p>
+<p>从 2.2.0 起，这个钩子也会捕获组件生命周期钩子里的错误。同样的，当这个钩子是 <code>undefined</code> 时，被捕获的错误会通过 <code>console.error</code> 输出而避免应用崩溃。</p>
+<p>从 2.4.0 起这个钩子也会捕获 Vue 自定义事件句柄内部的错误了。</p>
 <p><a href="https://sentry.io" target="_blank" rel="external">Sentry</a>, 一个错误追踪服务, 通过此选项提供<a href="https://sentry.io/for/vue/" target="_blank" rel="external">官方集成</a>。</p>
 </blockquote>
 </li>
@@ -343,9 +343,7 @@
 <p>设置为 <code>false</code> 以阻止 vue 在启动时生成生产提示。</p>
 </li>
 </ul>
-<h2 id="全局-API"><a href="#全局-API" class="headerlink" title="全局 API"></a>全局 API</h2><h3 id="Vue-extend">Vue.extend( options )</h3>
-
-<ul>
+<h2 id="全局-API"><a href="#全局-API" class="headerlink" title="全局 API"></a>全局 API</h2><h3 id="Vue-extend-options"><a href="#Vue-extend-options" class="headerlink" title="Vue.extend( options )"></a>Vue.extend( options )</h3><ul>
 <li><p><strong>参数：</strong></p>
 <ul>
 <li><code>{Object} options</code></li>
@@ -362,9 +360,7 @@
 <li><p><strong>参考：</strong> <a href="../guide/components.html">组件</a></p>
 </li>
 </ul>
-<h3 id="Vue-nextTick">Vue.nextTick( [callback, context] )</h3>
-
-<ul>
+<h3 id="Vue-nextTick-callback-context"><a href="#Vue-nextTick-callback-context" class="headerlink" title="Vue.nextTick( [callback, context] )"></a>Vue.nextTick( [callback, context] )</h3><ul>
 <li><p><strong>参数：</strong></p>
 <ul>
 <li><code>{Function} [callback]</code></li>
@@ -375,15 +371,13 @@
 <p>在下次 DOM 更新循环结束之后执行延迟回调。在修改数据之后立即使用这个方法，获取更新后的 DOM。</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// 修改数据</span></div><div class="line">vm.msg = <span class="string">'Hello'</span></div><div class="line"><span class="comment">// DOM 还没有更新</span></div><div class="line">Vue.nextTick(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">// DOM 更新了</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <blockquote>
-<p>2.1.0新增：如果没有提供回调且支持 promise 的环境中返回 promise。</p>
+<p>2.1.0 起新增：如果没有提供回调且支持 promise 的环境中返回 promise。</p>
 </blockquote>
 </li>
 <li><p><strong>参考：</strong> <a href="../guide/reactivity.html#异步更新队列">异步更新队列</a></p>
 </li>
 </ul>
-<h3 id="Vue-set">Vue.set( target, key, value )</h3>
-
-<ul>
+<h3 id="Vue-set-target-key-value"><a href="#Vue-set-target-key-value" class="headerlink" title="Vue.set( target, key, value )"></a>Vue.set( target, key, value )</h3><ul>
 <li><p><strong>参数：</strong></p>
 <ul>
 <li><code>{Object | Array} target</code></li>
@@ -400,9 +394,7 @@
 <li><p><strong>参考：</strong> <a href="../guide/reactivity.html">深入响应式原理</a></p>
 </li>
 </ul>
-<h3 id="Vue-delete">Vue.delete( target, key )</h3>
-
-<ul>
+<h3 id="Vue-delete-target-key"><a href="#Vue-delete-target-key" class="headerlink" title="Vue.delete( target, key )"></a>Vue.delete( target, key )</h3><ul>
 <li><p><strong>参数：</strong></p>
 <ul>
 <li><code>{Object | Array} target</code></li>
@@ -422,9 +414,7 @@
 <li><p><strong>参考：</strong> <a href="../guide/reactivity.html">深入响应式原理</a></p>
 </li>
 </ul>
-<h3 id="Vue-directive">Vue.directive( id, [definition] )</h3>
-
-<ul>
+<h3 id="Vue-directive-id-definition"><a href="#Vue-directive-id-definition" class="headerlink" title="Vue.directive( id, [definition] )"></a>Vue.directive( id, [definition] )</h3><ul>
 <li><p><strong>参数：</strong></p>
 <ul>
 <li><code>{string} id</code></li>
@@ -438,9 +428,7 @@
 <li><p><strong>参考：</strong> <a href="../guide/custom-directive.html">自定义指令</a></p>
 </li>
 </ul>
-<h3 id="Vue-filter">Vue.filter( id, [definition] )</h3>
-
-<ul>
+<h3 id="Vue-filter-id-definition"><a href="#Vue-filter-id-definition" class="headerlink" title="Vue.filter( id, [definition] )"></a>Vue.filter( id, [definition] )</h3><ul>
 <li><p><strong>参数：</strong></p>
 <ul>
 <li><code>{string} id</code></li>
@@ -452,9 +440,7 @@
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// 注册</span></div><div class="line">Vue.filter(<span class="string">'my-filter'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</div><div class="line">  <span class="comment">// 返回处理后的值</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// getter，返回已注册的过滤器</span></div><div class="line"><span class="keyword">var</span> myFilter = Vue.filter(<span class="string">'my-filter'</span>)</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="Vue-component">Vue.component( id, [definition] )</h3>
-
-<ul>
+<h3 id="Vue-component-id-definition"><a href="#Vue-component-id-definition" class="headerlink" title="Vue.component( id, [definition] )"></a>Vue.component( id, [definition] )</h3><ul>
 <li><p><strong>参数：</strong></p>
 <ul>
 <li><code>{string} id</code></li>
@@ -468,9 +454,7 @@
 <li><p><strong>参考：</strong> <a href="../guide/components.html">组件</a></p>
 </li>
 </ul>
-<h3 id="Vue-use">Vue.use( plugin )</h3>
-
-<ul>
+<h3 id="Vue-use-plugin"><a href="#Vue-use-plugin" class="headerlink" title="Vue.use( plugin )"></a>Vue.use( plugin )</h3><ul>
 <li><p><strong>参数：</strong></p>
 <ul>
 <li><code>{Object | Function} plugin</code></li>
@@ -483,9 +467,7 @@
 <li><p><strong>参考：</strong> <a href="../guide/plugins.html">插件</a></p>
 </li>
 </ul>
-<h3 id="Vue-mixin">Vue.mixin( mixin )</h3>
-
-<ul>
+<h3 id="Vue-mixin-mixin"><a href="#Vue-mixin-mixin" class="headerlink" title="Vue.mixin( mixin )"></a>Vue.mixin( mixin )</h3><ul>
 <li><p><strong>参数：</strong></p>
 <ul>
 <li><code>{Object} mixin</code></li>
@@ -497,9 +479,7 @@
 <li><p><strong>参考：</strong> <a href="../guide/mixins.html#全局混合">全局混合</a></p>
 </li>
 </ul>
-<h3 id="Vue-compile">Vue.compile( template )</h3>
-
-<ul>
+<h3 id="Vue-compile-template"><a href="#Vue-compile-template" class="headerlink" title="Vue.compile( template )"></a>Vue.compile( template )</h3><ul>
 <li><p><strong>参数：</strong></p>
 <ul>
 <li><code>{string} template</code></li>
@@ -512,9 +492,7 @@
 <li><p><strong>参考：</strong> <a href="../guide/render-function.html">Render 函数</a></p>
 </li>
 </ul>
-<h3 id="Vue-version">Vue.version</h3>
-
-<ul>
+<h3 id="Vue-version"><a href="#Vue-version" class="headerlink" title="Vue.version"></a>Vue.version</h3><ul>
 <li><p><strong>细节：</strong>提供字符串形式的 Vue 安装版本号。这对社区的插件和组件来说非常有用，你可以根据不同的版本号采取不同的策略。</p>
 </li>
 <li><p><strong>用法：</strong></p>
@@ -681,7 +659,8 @@
 </ul>
 </li>
 </ul>
-<h2 id="选项-生命周期钩子"><a href="#选项-生命周期钩子" class="headerlink" title="选项 / 生命周期钩子"></a>选项 / 生命周期钩子</h2><p>所有的生命周期钩子自动绑定 <code>this</code> 上下文到实例中，因此你可以访问数据，对属性和方法进行运算。这意味着 <strong>你不能使用箭头函数来定义一个生命周期方法</strong> (例如 <code>created: () =&gt; this.fetchTodos()</code>)。这是因为箭头函数绑定了父上下文，因此 <code>this</code> 与你期待的 Vue 实例不同， <code>this.fetchTodos</code> 的行为未定义。</p>
+<h2 id="选项-生命周期钩子"><a href="#选项-生命周期钩子" class="headerlink" title="选项 / 生命周期钩子"></a>选项 / 生命周期钩子</h2><p class="tip">所有的生命周期钩子自动绑定 <code>this</code> 上下文到实例中，因此你可以访问数据，对属性和方法进行运算。这意味着 <strong>你不能使用箭头函数来定义一个生命周期方法</strong> (例如 <code>created: () =&gt; this.fetchTodos()</code>)。这是因为箭头函数绑定了父上下文，因此 <code>this</code> 与你期待的 Vue 实例不同， <code>this.fetchTodos</code> 的行为未定义。</p>
+
 <h3 id="beforeCreate"><a href="#beforeCreate" class="headerlink" title="beforeCreate"></a>beforeCreate</h3><ul>
 <li><p><strong>类型：</strong> <code>Function</code></p>
 </li>
@@ -886,7 +865,7 @@
 <p>利用 ES2015 Symbols、函数 <code>provide</code> 和对象 <code>inject</code>：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">const</span> s = <span class="built_in">Symbol</span>()</div><div class="line"></div><div class="line"><span class="keyword">const</span> Provider = &#123;</div><div class="line">  provide () &#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      [s]: <span class="string">'foo'</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> Child = &#123;</div><div class="line">  <span class="attr">inject</span>: &#123; s &#125;,</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <blockquote>
-<p>接下来 2 个例子只工作在 Vue &gt; 2.2.1。低于这个版本时，注入的值会在 <code>props</code> 和 <code>data</code> 初始化之后得到。</p>
+<p>接下来 2 个例子只工作在 Vue 2.2.1 或更高版本。低于这个版本时，注入的值会在 <code>props</code> 和 <code>data</code> 初始化之后得到。</p>
 </blockquote>
 <p>使用一个注入的值作为一个属性的默认值：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">const</span> Child = &#123;</div><div class="line">  <span class="attr">inject</span>: [<span class="string">'foo'</span>],</div><div class="line">  <span class="attr">props</span>: &#123;</div><div class="line">    <span class="attr">bar</span>: &#123;</div><div class="line">      <span class="keyword">default</span> () &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.foo</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -909,8 +888,10 @@
 </li>
 <li><p><strong>默认值:</strong> <code>["{{", "}}"]</code></p>
 </li>
+<li><p><strong>限制:</strong> 这个选项只在完整构建版本中的浏览器内编译时可用。</p>
+</li>
 <li><p><strong>详细:</strong></p>
-<p>改变纯文本插入分隔符。 <strong>这个选择只有在独立构建时才有用。</strong></p>
+<p>改变纯文本插入分隔符。</p>
 </li>
 <li><p><strong>示例:</strong></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">delimiters</span>: [<span class="string">'$&#123;'</span>, <span class="string">'&#125;'</span>]</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// 分隔符变成了 ES6 模板字符串的风格</span></div></pre></td></tr></table></figure>
@@ -951,15 +932,18 @@
 </li>
 <li><p><strong>详细：</strong></p>
 <p>默认情况下父作用域的不被认作 props 的特性绑定 (attribute bindings) 将会“回退”且作为普通的 HTML 特性应用在子组件的根元素上。当撰写包裹一个目标元素或另一个组件的组件时，这可能不会总是符合预期行为。通过设置 <code>inheritAttrs</code> 到 <code>false</code>，这些默认行为将会被去掉。而通过 (同样是 2.4 新增的) 实例属性 <code>$attrs</code> 可以让这些特性生效，且可以通过 <code>v-bind</code> 显性的绑定到非根元素上。</p>
+<p>注意：这个选项<strong>不影响</strong> <code>class</code> 和 <code>style</code> 绑定。</p>
 </li>
 </ul>
 <h3 id="comments"><a href="#comments" class="headerlink" title="comments"></a>comments</h3><blockquote>
 <p>2.4.0 新增</p>
 </blockquote>
 <ul>
-<li><p><strong>类型</strong> <code>boolean</code></p>
+<li><p><strong>类型：</strong> <code>boolean</code></p>
 </li>
 <li><p><strong>默认值：</strong> <code>false</code></p>
+</li>
+<li><p><strong>限制：</strong> 这个选项只在完整构建版本中的浏览器内编译时可用。</p>
 </li>
 <li><p><strong>详细：</strong></p>
 <p>当设为 <code>true</code> 时，将会保留且渲染模板中的 HTML 注释。默认行为是舍弃它们。</p>
@@ -1052,7 +1036,7 @@
 </li>
 </ul>
 <h3 id="vm-scopedSlots"><a href="#vm-scopedSlots" class="headerlink" title="vm.$scopedSlots"></a>vm.$scopedSlots</h3><blockquote>
-<p>2.1.0新增</p>
+<p>2.1.0 新增</p>
 </blockquote>
 <ul>
 <li><p><strong>类型：</strong> <code>{ [name: string]: props =&gt; VNode | Array&lt;VNode&gt; }</code></p>
@@ -1103,7 +1087,7 @@
 <li><p><strong>只读</strong></p>
 </li>
 <li><p><strong>详细：</strong></p>
-<p>包含了父作用域中不被认为 (且不预期为) props 的特性绑定。当一个组件没有声明任何 props 时，这里会包含除 <code>class</code> 和 <code>style</code> 之外的所有父作用域的绑定，并且可以通过 <code>v-bind=&quot;$attrs&quot;</code> 传入内部组件——在创建更高层次的组件时非常有用。</p>
+<p>包含了父作用域中不被认为 (且不预期为) props 的特性绑定 (<code>class</code> 和 <code>style</code> 除外)。当一个组件没有声明任何 props 时，这里会包含所有父作用域的绑定 (<code>class</code> 和 <code>style</code> 除外)，并且可以通过 <code>v-bind=&quot;$attrs&quot;</code> 传入内部组件——在创建更高层次的组件时非常有用。</p>
 </li>
 </ul>
 <h3 id="vm-listeners"><a href="#vm-listeners" class="headerlink" title="vm.$listeners"></a>vm.$listeners</h3><ul>
@@ -1115,9 +1099,7 @@
 <p>包含了父作用域中的 (不含 <code>.native</code> 修饰器的) <code>v-on</code> 事件监听器。它可以通过 <code>v-on=&quot;$listeners&quot;</code> 传入内部组件——在创建更高层次的组件时非常有用。</p>
 </li>
 </ul>
-<h2 id="实例方法-数据"><a href="#实例方法-数据" class="headerlink" title="实例方法 / 数据"></a>实例方法 / 数据</h2><h3 id="vm-watch">vm.$watch( expOrFn, callback, [options] )</h3>
-
-<ul>
+<h2 id="实例方法-数据"><a href="#实例方法-数据" class="headerlink" title="实例方法 / 数据"></a>实例方法 / 数据</h2><h3 id="vm-watch-expOrFn-callback-options"><a href="#vm-watch-expOrFn-callback-options" class="headerlink" title="vm.$watch( expOrFn, callback, [options] )"></a>vm.$watch( expOrFn, callback, [options] )</h3><ul>
 <li><p><strong>参数：</strong></p>
 <ul>
 <li><code>{string | Function} expOrFn</code></li>
@@ -1149,9 +1131,7 @@
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">vm.$watch(<span class="string">'a'</span>, callback, &#123;</div><div class="line">  <span class="attr">immediate</span>: <span class="literal">true</span></div><div class="line">&#125;)</div><div class="line"><span class="comment">// 立即以 `a` 的当前值触发回调</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="vm-set">vm.$set( target, key, value )</h3>
-
-<ul>
+<h3 id="vm-set-target-key-value"><a href="#vm-set-target-key-value" class="headerlink" title="vm.$set( target, key, value )"></a>vm.$set( target, key, value )</h3><ul>
 <li><p><strong>参数：</strong></p>
 <ul>
 <li><code>{Object | Array} target</code></li>
@@ -1167,9 +1147,7 @@
 <li><p><strong>另见：</strong> <a href="#Vue-set">Vue.set</a></p>
 </li>
 </ul>
-<h3 id="vm-delete">vm.$delete( target, key )</h3>
-
-<ul>
+<h3 id="vm-delete-target-key"><a href="#vm-delete-target-key" class="headerlink" title="vm.$delete( target, key )"></a>vm.$delete( target, key )</h3><ul>
 <li><p><strong>参数：</strong></p>
 <ul>
 <li><code>{Object | Array} target</code></li>
@@ -1182,9 +1160,7 @@
 <li><p><strong>另见：</strong> <a href="#Vue-delete">Vue.delete</a></p>
 </li>
 </ul>
-<h2 id="实例方法-事件"><a href="#实例方法-事件" class="headerlink" title="实例方法/事件"></a>实例方法/事件</h2><h3 id="vm-on">vm.$on( event, callback )</h3>
-
-<ul>
+<h2 id="实例方法-事件"><a href="#实例方法-事件" class="headerlink" title="实例方法/事件"></a>实例方法/事件</h2><h3 id="vm-on-event-callback"><a href="#vm-on-event-callback" class="headerlink" title="vm.$on( event, callback )"></a>vm.$on( event, callback )</h3><ul>
 <li><p><strong>参数：</strong></p>
 <ul>
 <li><code>{string | Array&lt;string&gt;} event</code> (数组只在 2.2.0+ 中支持)</li>
@@ -1198,9 +1174,7 @@
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">vm.$on(<span class="string">'test'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">msg</span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(msg)</div><div class="line">&#125;)</div><div class="line">vm.$emit(<span class="string">'test'</span>, <span class="string">'hi'</span>)</div><div class="line"><span class="comment">// -&gt; "hi"</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="vm-once">vm.$once( event, callback )</h3>
-
-<ul>
+<h3 id="vm-once-event-callback"><a href="#vm-once-event-callback" class="headerlink" title="vm.$once( event, callback )"></a>vm.$once( event, callback )</h3><ul>
 <li><p><strong>参数：</strong></p>
 <ul>
 <li><code>{string} event</code></li>
@@ -1211,9 +1185,7 @@
 <p>监听一个自定义事件，但是只触发一次，在第一次触发之后移除监听器。</p>
 </li>
 </ul>
-<h3 id="vm-off">vm.$off( [event, callback] )</h3>
-
-<ul>
+<h3 id="vm-off-event-callback"><a href="#vm-off-event-callback" class="headerlink" title="vm.$off( [event, callback] )"></a>vm.$off( [event, callback] )</h3><ul>
 <li><p><strong>参数：</strong></p>
 <ul>
 <li><code>{string} [event]</code></li>
@@ -1232,9 +1204,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="vm-emit">vm.$emit( event, […args] )</h3>
-
-<ul>
+<h3 id="vm-emit-event-…args"><a href="#vm-emit-event-…args" class="headerlink" title="vm.$emit( event, […args] )"></a>vm.$emit( event, […args] )</h3><ul>
 <li><p><strong>参数：</strong></p>
 <ul>
 <li><code>{string} event</code></li>
@@ -1243,9 +1213,7 @@
 <p>触发当前实例上的事件。附加参数都会传给监听器回调。</p>
 </li>
 </ul>
-<h2 id="实例方法-生命周期"><a href="#实例方法-生命周期" class="headerlink" title="实例方法 / 生命周期"></a>实例方法 / 生命周期</h2><h3 id="vm-mount">vm.$mount( [elementOrSelector] )</h3>
-
-<ul>
+<h2 id="实例方法-生命周期"><a href="#实例方法-生命周期" class="headerlink" title="实例方法 / 生命周期"></a>实例方法 / 生命周期</h2><h3 id="vm-mount-elementOrSelector"><a href="#vm-mount-elementOrSelector" class="headerlink" title="vm.$mount( [elementOrSelector] )"></a>vm.$mount( [elementOrSelector] )</h3><ul>
 <li><p><strong>参数：</strong></p>
 <ul>
 <li><code>{Element | string} [elementOrSelector]</code></li>
@@ -1269,29 +1237,23 @@
 </ul>
 </li>
 </ul>
-<h3 id="vm-forceUpdate">vm.$forceUpdate()</h3>
-
-<ul>
+<h3 id="vm-forceUpdate"><a href="#vm-forceUpdate" class="headerlink" title="vm.$forceUpdate()"></a>vm.$forceUpdate()</h3><ul>
 <li><p><strong>示例：</strong></p>
-<p>迫使Vue实例重新渲染。注意它仅仅影响实例本身和插入插槽内容的子组件，而不是所有子组件。</p>
+<p>迫使 Vue 实例重新渲染。注意它仅仅影响实例本身和插入插槽内容的子组件，而不是所有子组件。</p>
 </li>
 </ul>
-<h3 id="vm-nextTick">vm.$nextTick( [callback] )</h3>
-
-<ul>
+<h3 id="vm-nextTick-callback"><a href="#vm-nextTick-callback" class="headerlink" title="vm.$nextTick( [callback] )"></a>vm.$nextTick( [callback] )</h3><ul>
 <li><p><strong>参数：</strong></p>
 <ul>
 <li><code>{Function} [callback]</code></li>
 </ul>
 </li>
 <li><p><strong>用法：</strong></p>
-<p>将回调延迟到下次 DOM 更新循环之后执行。在修改数据之后立即使用它，然后等待 DOM 更新。它跟全局方法 Vue.nextTick 一样，不同的是回调的 <code>this</code> 自动绑定到调用它的实例上。</p>
-</li>
-</ul>
+<p>将回调延迟到下次 DOM 更新循环之后执行。在修改数据之后立即使用它，然后等待 DOM 更新。它跟全局方法 <code>Vue.nextTick</code> 一样，不同的是回调的 <code>this</code> 自动绑定到调用它的实例上。</p>
 <blockquote>
-<p>2.1.0新增：如果没有提供回调且支持 promise 的环境中返回 promise。</p>
+<p>2.1.0 新增：如果没有提供回调且支持 Promise 的环境中返回 Promise。</p>
 </blockquote>
-<ul>
+</li>
 <li><p><strong>示例：</strong></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">  methods: &#123;</div><div class="line">    <span class="comment">// ...</span></div><div class="line">    example: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="comment">// 修改数据</span></div><div class="line">      <span class="keyword">this</span>.message = <span class="string">'changed'</span></div><div class="line">      <span class="comment">// DOM 还没有更新</span></div><div class="line">      <span class="keyword">this</span>.$nextTick(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="comment">// DOM 现在更新了</span></div><div class="line">        <span class="comment">// `this` 绑定到当前实例</span></div><div class="line">        <span class="keyword">this</span>.doSomethingElse()</div><div class="line">      &#125;)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 </li>
@@ -1302,9 +1264,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="vm-destroy">vm.$destroy()</h3>
-
-<ul>
+<h3 id="vm-destroy"><a href="#vm-destroy" class="headerlink" title="vm.$destroy()"></a>vm.$destroy()</h3><ul>
 <li><p><strong>用法：</strong></p>
 <p>完全销毁一个实例。清理它与其它实例的连接，解绑它的全部指令及事件监听器。</p>
 <p>触发 <code>beforeDestroy</code> 和 <code>destroyed</code> 的钩子。</p>
@@ -1375,7 +1335,7 @@
 </li>
 </ul>
 <h3 id="v-else-if"><a href="#v-else-if" class="headerlink" title="v-else-if"></a>v-else-if</h3><blockquote>
-<p>2.1.0新增</p>
+<p>2.1.0 新增</p>
 </blockquote>
 <ul>
 <li><p><strong>类型:</strong> <code>any</code></p>
@@ -1689,7 +1649,7 @@
 </blockquote>
 <p>主要用于保留组件状态或避免重新渲染。</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 基本 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">keep-alive</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">component</span> <span class="attr">:is</span>=<span class="string">"view"</span>&gt;</span><span class="tag">&lt;/<span class="name">component</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">keep-alive</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 多个条件判断的子组件 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">keep-alive</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">comp-a</span> <span class="attr">v-if</span>=<span class="string">"a &gt; 1"</span>&gt;</span><span class="tag">&lt;/<span class="name">comp-a</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">comp-b</span> <span class="attr">v-else</span>&gt;</span><span class="tag">&lt;/<span class="name">comp-b</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">keep-alive</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 和 &lt;transition&gt; 一起使用 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">transition</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">keep-alive</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">component</span> <span class="attr">:is</span>=<span class="string">"view"</span>&gt;</span><span class="tag">&lt;/<span class="name">component</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">keep-alive</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">transition</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>注意，<code>&lt;keep-alive&gt;</code> 是用在其一个直属的子组件被开关的情形。如果你在其中有 <code>v-if</code> 则不会工作。如果有上述的多个条件性的子元素，<code>&lt;keep-alive&gt;</code> 要求同时只有一个字元素被渲染。</p>
+<p>注意，<code>&lt;keep-alive&gt;</code> 是用在其一个直属的子组件被开关的情形。如果你在其中有 <code>v-if</code> 则不会工作。如果有上述的多个条件性的子元素，<code>&lt;keep-alive&gt;</code> 要求同时只有一个子元素被渲染。</p>
 </li>
 <li><p><strong><code>include</code> and <code>exclude</code></strong></p>
 <blockquote>

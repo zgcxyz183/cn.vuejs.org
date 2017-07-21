@@ -202,8 +202,8 @@
         <div class="list">
             <div class="main-sponsor">
                 <span>赞助者</span><br>
-                <a href="https://console.upyun.com/register/?invite=H124C2iMZ&utm_source=vue&utm_medium=ad&utm_content=con" target="_blank">
-                    <img src="/images/upyun-main.jpg">
+                <a href="https://cn.100offer.com/how-it-works/?utm_source=vuejs&utm_medium=display&utm_campaign=vuejs_20170704&utm_content=find_new_job&campaign_code=vuejs" target="_blank">
+                    <img src="/images/100offer-main.png">
                 </a>
             </div>
             <a class="become-backer" href="/support-vuejs">
@@ -633,7 +633,7 @@
 
 <h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><p>Mustache 不能在 HTML 属性中使用，应使用 <a href="../api/#v-bind">v-bind 指令</a>：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:id</span>=<span class="string">"dynamicId"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>这对布尔值的属性也有效 —— 如果条件被求值为 false 的话该属性会被移除： </p>
+<p>这对布尔值的属性也有效 —— 如果条件被求值为 false 的话该属性会被移除：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">v-bind:disabled</span>=<span class="string">"isButtonDisabled"</span>&gt;</span>Button<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div></pre></td></tr></table></figure>
 <h3 id="使用-JavaScript-表达式"><a href="#使用-JavaScript-表达式" class="headerlink" title="使用 JavaScript 表达式"></a>使用 JavaScript 表达式</h3><p>迄今为止，在我们的模板中，我们一直都只绑定简单的属性键值。但实际上，对于所有的数据绑定， Vue.js 都提供了完全的 JavaScript 表达式支持。</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line">&#123;&#123; number + 1 &#125;&#125;</div><div class="line"></div><div class="line">&#123;&#123; ok ? 'YES' : 'NO' &#125;&#125;</div><div class="line"></div><div class="line">&#123;&#123; message.split('').reverse().join('') &#125;&#125;</div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:id</span>=<span class="string">"'list-' + id"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -656,7 +656,7 @@
 <p>之后当我们更深入地了解 <code>v-on</code> 与 <code>v-model</code>时，会看到更多修饰符的使用。</p>
 <h2 id="过滤器"><a href="#过滤器" class="headerlink" title="过滤器"></a>过滤器</h2><p>Vue.js 允许你自定义过滤器，可被用作一些常见的文本格式化。过滤器可以用在两个地方：<strong>mustache 插值和 <code>v-bind</code> 表达式</strong>。过滤器应该被添加在 JavaScript 表达式的尾部，由“管道”符指示：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- in mustaches --&gt;</span></div><div class="line">&#123;&#123; message | capitalize &#125;&#125;</div><div class="line"></div><div class="line"><span class="comment">&lt;!-- in v-bind --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:id</span>=<span class="string">"rawId | formatId"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<p class="tip">Vue 2.x 中，过滤器只能在 mustache 绑定和 <code>v-bind</code> 表达式（从 2.1.0 开始支持）中使用，因为过滤器设计目的就是用于文本转换。为了在其他指令中实现更复杂的数据变换，你应该使用<a href="computed.html">计算属性</a>。</p>
+<p class="tip">Vue 2.x 中，过滤器只能在 mustache 绑定和 <code>v-bind</code> 表达式 (后者从 2.1.0 起支持) 中使用，因为过滤器设计目的就是用于文本转换。为了在其他指令中实现更复杂的数据变换，你应该使用<a href="computed.html">计算属性</a>。</p>
 
 <p>过滤器函数总接受表达式的值作为第一个参数。</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">  filters: &#123;</div><div class="line">    <span class="attr">capitalize</span>: <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</div><div class="line">      <span class="keyword">if</span> (!value) <span class="keyword">return</span> <span class="string">''</span></div><div class="line">      value = value.toString()</div><div class="line">      <span class="keyword">return</span> value.charAt(<span class="number">0</span>).toUpperCase() + value.slice(<span class="number">1</span>)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>

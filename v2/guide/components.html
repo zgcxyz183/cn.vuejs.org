@@ -202,8 +202,8 @@
         <div class="list">
             <div class="main-sponsor">
                 <span>赞助者</span><br>
-                <a href="https://console.upyun.com/register/?invite=H124C2iMZ&utm_source=vue&utm_medium=ad&utm_content=con" target="_blank">
-                    <img src="/images/upyun-main.jpg">
+                <a href="https://cn.100offer.com/how-it-works/?utm_source=vuejs&utm_medium=display&utm_campaign=vuejs_20170704&utm_content=find_new_job&campaign_code=vuejs" target="_blank">
+                    <img src="/images/100offer-main.png">
                 </a>
             </div>
             <a class="become-backer" href="/support-vuejs">
@@ -869,7 +869,7 @@ new Vue({
 </blockquote>
 <p>在一些情况下，我们可能会需要对一个 prop 进行『双向绑定』。事实上，这正是 Vue 1.x 中的 <code>.sync</code>修饰符所提供的功能。当一个子组件改变了一个 prop 的值时，这个变化也会同步到父组件中所绑定的值。这很方便，但也会导致问题，因为它破坏了『单向数据流』的假设。由于子组件改变 prop 的代码和普通的状态改动代码毫无区别，当光看子组件的代码时，你完全不知道它何时悄悄地改变了父组件的状态。这在 debug 复杂结构的应用时会带来很高的维护成本。</p>
 <p>上面所说的正是我们在 2.0 中移除 <code>.sync</code> 的理由。但是在 2.0 发布之后的实际应用中，我们发现 <code>.sync</code> 还是有其适用之处，比如在开发可复用的组件库时。我们需要做的只是<strong>让子组件改变父组件状态的代码更容易被区分</strong>。</p>
-<p>在 2.3 我们重新引入了 <code>.sync</code> 修饰符，但是这次它只是作为一个编译时的语法糖存在。它会被扩展为一个自动更新父组件属性的 <code>v-on</code> 侦听器。</p>
+<p>从 2.3.0 起我们重新引入了 <code>.sync</code> 修饰符，但是这次它只是作为一个编译时的语法糖存在。它会被扩展为一个自动更新父组件属性的 <code>v-on</code> 侦听器。</p>
 <p>如下代码</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">comp</span> <span class="attr">:foo.sync</span>=<span class="string">"bar"</span>&gt;</span><span class="tag">&lt;/<span class="name">comp</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>会被扩展为：</p>
@@ -1037,7 +1037,7 @@ new Vue({
 <h3 id="高级异步组件"><a href="#高级异步组件" class="headerlink" title="高级异步组件"></a>高级异步组件</h3><blockquote>
 <p>2.3.0 新增</p>
 </blockquote>
-<p>自 2.3 起，异步组件的工厂函数也可以返回一个如下的对象：</p>
+<p>自 2.3.0 起，异步组件的工厂函数也可以返回一个如下的对象：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">const</span> AsyncComp = <span class="function"><span class="params">()</span> =&gt;</span> (&#123;</div><div class="line">  <span class="comment">// 需要加载的组件. 应当是一个 Promise</span></div><div class="line">  component: <span class="keyword">import</span>(<span class="string">'./MyComp.vue'</span>),</div><div class="line">  <span class="comment">// loading 时应当渲染的组件</span></div><div class="line">  loading: LoadingComp,</div><div class="line">  <span class="comment">// 出错时渲染的组件</span></div><div class="line">  error: ErrorComp,</div><div class="line">  <span class="comment">// 渲染 loading 组件前的等待时间。默认：200ms.</span></div><div class="line">  delay: <span class="number">200</span>,</div><div class="line">  <span class="comment">// 最长等待时间。超出此时间则渲染 error 组件。默认：Infinity</span></div><div class="line">  timeout: <span class="number">3000</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>注意，当一个异步组件被作为 <code>vue-router</code> 的路由组件使用时，这些高级选项都是无效的，因为在路由切换前就会提前加载所需要的异步组件。另外，如果你要在路由组件中上述写法，需要使用 <code>vue-router</code> 2.4.0+。</p>
 <h3 id="组件命名约定"><a href="#组件命名约定" class="headerlink" title="组件命名约定"></a>组件命名约定</h3><p>当注册组件 (或者 props) 时，可以使用 kebab-case，camelCase，或 PascalCase。</p>
