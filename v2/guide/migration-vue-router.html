@@ -827,7 +827,7 @@
   <p>运行 <a href="https://github.com/vuejs/vue-migration-helper" target="_blank" rel="external">迁移助手</a> 找到 <code>canReuse: false</code> 选项的示例。</p>
 </div>
 
-<h3 id="data-替换"><a href="#data-替换" class="headerlink" title="data 替换"></a><code>data</code> <sup>替换</sup></h3><p><code>$route</code>属性是响应式的，所有你可以就使用一个 watcher 去响应路由的改变，就像这样：</p>
+<h3 id="data-替换"><a href="#data-替换" class="headerlink" title="data 替换"></a><code>data</code> <sup>替换</sup></h3><p><code>$route</code>属性是响应式的，所以你可以就使用一个 watcher 去响应路由的改变，就像这样：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">watch: &#123;</div><div class="line">  <span class="string">'$route'</span>: <span class="string">'fetchData'</span></div><div class="line">&#125;,</div><div class="line"><span class="attr">methods</span>: &#123;</div><div class="line">  <span class="attr">fetchData</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// ...</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
 <div class="upgrade-path">
