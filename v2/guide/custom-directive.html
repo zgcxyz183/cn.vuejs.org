@@ -202,8 +202,8 @@
         <div class="list">
             <div class="main-sponsor">
                 <span>赞助者</span><br>
-                <a href="https://cn.100offer.com/how-it-works/?utm_source=vuejs&utm_medium=display&utm_campaign=vuejs_20170704&utm_content=find_new_job&campaign_code=vuejs" target="_blank">
-                    <img src="/images/100offer-main.png">
+                <a href="https://xiaozhuanlan.com/" target="_blank" style="display: block; margin: 6px 0">
+                    <img src="/images/xiaozhuanlan-sidebar.png" style="border-radius: 3px">
                 </a>
             </div>
             <a class="become-backer" href="/support-vuejs">
@@ -646,9 +646,9 @@ new Vue({
 </li>
 <li><p><code>inserted</code>: 被绑定元素插入父节点时调用（父节点存在即可调用，不必存在于 document 中）。</p>
 </li>
-<li><p><code>update</code>: 被绑定元素所在的模板更新时调用，而不论绑定值是否变化。通过比较更新前后的绑定值，可以忽略不必要的模板更新（详细的钩子函数参数见下）。</p>
+<li><p><code>update</code>: 所在组件的 VNode 更新时调用，<strong>但是可能发生在其孩子的 VNode 更新之前</strong>。指令的值可能发生了改变也可能没有。但是你可以通过比较更新前后的值来忽略不必要的模板更新 (详细的钩子函数参数见下)。</p>
 </li>
-<li><p><code>componentUpdated</code>: 被绑定元素所在模板完成一次更新周期时调用。</p>
+<li><p><code>componentUpdated</code>: 所在组件的 VNode <strong>及其孩子的 VNode</strong> 全部更新时调用。</p>
 </li>
 <li><p><code>unbind</code>: 只调用一次， 指令与元素解绑时调用。</p>
 </li>

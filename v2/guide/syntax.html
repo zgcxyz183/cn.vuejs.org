@@ -202,8 +202,8 @@
         <div class="list">
             <div class="main-sponsor">
                 <span>赞助者</span><br>
-                <a href="https://cn.100offer.com/how-it-works/?utm_source=vuejs&utm_medium=display&utm_campaign=vuejs_20170704&utm_content=find_new_job&campaign_code=vuejs" target="_blank">
-                    <img src="/images/100offer-main.png">
+                <a href="https://xiaozhuanlan.com/" target="_blank" style="display: block; margin: 6px 0">
+                    <img src="/images/xiaozhuanlan-sidebar.png" style="border-radius: 3px">
                 </a>
             </div>
             <a class="become-backer" href="/support-vuejs">
@@ -658,13 +658,14 @@
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- in mustaches --&gt;</span></div><div class="line">&#123;&#123; message | capitalize &#125;&#125;</div><div class="line"></div><div class="line"><span class="comment">&lt;!-- in v-bind --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:id</span>=<span class="string">"rawId | formatId"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <p class="tip">Vue 2.x 中，过滤器只能在 mustache 绑定和 <code>v-bind</code> 表达式 (后者从 2.1.0 起支持) 中使用，因为过滤器设计目的就是用于文本转换。为了在其他指令中实现更复杂的数据变换，你应该使用<a href="computed.html">计算属性</a>。</p>
 
-<p>过滤器函数总接受表达式的值作为第一个参数。</p>
+<p>过滤器函数总接受表达式的值 (之前的操作链的结果) 作为第一个参数。在这个例子中，<code>capitalize</code> 过滤器函数将会收到 <code>message</code> 的值作为第一个参数。</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">  filters: &#123;</div><div class="line">    <span class="attr">capitalize</span>: <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</div><div class="line">      <span class="keyword">if</span> (!value) <span class="keyword">return</span> <span class="string">''</span></div><div class="line">      value = value.toString()</div><div class="line">      <span class="keyword">return</span> value.charAt(<span class="number">0</span>).toUpperCase() + value.slice(<span class="number">1</span>)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>过滤器可以串联：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line">&#123;&#123; message | filterA | filterB &#125;&#125;</div></pre></td></tr></table></figure>
+<p>在这个例子中，<code>filterA</code> 拥有单个参数，它会接收 <code>message</code> 的值，然后调用 <code>filterB</code>，且 <code>filterA</code> 的处理结果将会作为 <code>filterB</code> 的单个参数传递进来。</p>
 <p>过滤器是 JavaScript 函数，因此可以接受参数：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line">&#123;&#123; message | filterA('arg1', arg2) &#125;&#125;</div></pre></td></tr></table></figure>
-<p>这里，字符串 <code>&#39;arg1&#39;</code> 将传给过滤器作为第二个参数， <code>arg2</code> 表达式的值将被求值然后传给过滤器作为第三个参数。</p>
+<p>这里，<code>filterA</code> 是个拥有三个参数的函数。<code>message</code> 的值将会作为第一个参数传入。字符串 <code>&#39;arg1&#39;</code> 将作为第二个参数传给 <code>filterA</code>，表达式 <code>arg2</code> 的值将作为第三个参数。</p>
 <h2 id="缩写"><a href="#缩写" class="headerlink" title="缩写"></a>缩写</h2><p><code>v-</code> 前缀在模板中是作为一个标示 Vue 特殊属性的明显标识。当你使用 Vue.js 为现有的标记添加动态行为时，它会很有用，但对于一些经常使用的指令来说有点繁琐。同时，当搭建 Vue.js 管理所有模板的 <a href="https://en.wikipedia.org/wiki/Single-page_application" target="_blank" rel="external">SPA</a> 时，<code>v-</code> 前缀也变得没那么重要了。因此，Vue.js 为两个最为常用的指令提供了特别的缩写：</p>
 <h3 id="v-bind-缩写"><a href="#v-bind-缩写" class="headerlink" title="v-bind 缩写"></a><code>v-bind</code> 缩写</h3><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 完整语法 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">v-bind:href</span>=<span class="string">"url"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 缩写 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">:href</span>=<span class="string">"url"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
 <h3 id="v-on-缩写"><a href="#v-on-缩写" class="headerlink" title="v-on 缩写"></a><code>v-on</code> 缩写</h3><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 完整语法 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">v-on:click</span>=<span class="string">"doSomething"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 缩写 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> @<span class="attr">click</span>=<span class="string">"doSomething"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
