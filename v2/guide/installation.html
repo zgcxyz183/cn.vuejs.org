@@ -521,7 +521,7 @@
         
         
         <li>
-            <a href="/v2/guide/typescript.html" class="sidebar-link">TypeScript Support</a>
+            <a href="/v2/guide/typescript.html" class="sidebar-link">TypeScript 支持</a>
         </li>
     
         
@@ -686,7 +686,7 @@
 <li><p><strong><a href="http://exploringjs.com/es6/ch_modules.html" target="_blank" rel="external">ES Module</a></strong>：ES module 构建用来配合现代打包工具比如 <a href="https://webpack.js.org" target="_blank" rel="external">webpack 2</a> 或 <a href="http://rollupjs.org/" target="_blank" rel="external">rollup</a>。这些打包工具的默认文件 (<code>pkg.module</code>) 是只包含运行时的 ES Module 构建 (<code>vue.runtime.esm.js</code>)。</p>
 </li>
 </ul>
-<h3 id="运行时-编译器-vs-只包含运行时"><a href="#运行时-编译器-vs-只包含运行时" class="headerlink" title="运行时 + 编译器 vs. 只包含运行时"></a>运行时 + 编译器 vs. 只包含运行时</h3><p>如果你需要线上编译模板 (比如传入一个字符串的 <code>template</code> 选项，或挂载到一个元素上并以其内部的 HTML 作为模板)，你将需要加上编译器，即完整版的构建：</p>
+<h3 id="运行时-编译器-vs-只包含运行时"><a href="#运行时-编译器-vs-只包含运行时" class="headerlink" title="运行时 + 编译器 vs. 只包含运行时"></a>运行时 + 编译器 vs. 只包含运行时</h3><p>如果你需要在客户端编译模板 (比如传入一个字符串的 <code>template</code> 选项，或挂载到一个元素上并以其内部的 HTML 作为模板)，你将需要加上编译器，即完整版的构建：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// 需要编译器</span></div><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">template</span>: <span class="string">'&lt;div&gt;&#123;&#123; hi &#125;&#125;&lt;/div&gt;'</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// 不需要编译器</span></div><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  render (h) &#123;</div><div class="line">    <span class="keyword">return</span> h(<span class="string">'div'</span>, <span class="keyword">this</span>.hi)</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>当使用 <code>vue-loader</code> 或 <code>vueify</code> 的时候，<code>*.vue</code> 文件内部的模板会在构建时预编译成 JavaScript。你在最终打好的包里实际上是不需要编译器的，因为只是用运行时构建即可。</p>
 <p>因为运行时构建相比完整版缩减了 30% 的体积，你应该尽可能使用这个版本。如果你仍然希望使用完整版构建，你需要在你的打包工具里配置一个别名：</p>

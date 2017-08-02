@@ -521,7 +521,7 @@
         
         
         <li>
-            <a href="/v2/guide/typescript.html" class="sidebar-link">TypeScript Support</a>
+            <a href="/v2/guide/typescript.html" class="sidebar-link">TypeScript 支持</a>
         </li>
     
         
@@ -826,7 +826,7 @@ new Vue({
 
 <p>下面是一个例子：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"counter-event-example"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123; total &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">button-counter</span> <span class="attr">v-on:increment</span>=<span class="string">"incrementTotal"</span>&gt;</span><span class="tag">&lt;/<span class="name">button-counter</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">button-counter</span> <span class="attr">v-on:increment</span>=<span class="string">"incrementTotal"</span>&gt;</span><span class="tag">&lt;/<span class="name">button-counter</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.component(<span class="string">'button-counter'</span>, &#123;</div><div class="line">  <span class="attr">template</span>: <span class="string">'&lt;button v-on:click="increment"&gt;&#123;&#123; counter &#125;&#125;&lt;/button&gt;'</span>,</div><div class="line">  <span class="attr">data</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      <span class="attr">counter</span>: <span class="number">0</span></div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">methods</span>: &#123;</div><div class="line">    <span class="attr">increment</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">this</span>.counter += <span class="number">1</span></div><div class="line">      <span class="keyword">this</span>.$emit(<span class="string">'increment'</span>)</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">el</span>: <span class="string">'#counter-event-example'</span>,</div><div class="line">  <span class="attr">data</span>: &#123;</div><div class="line">    <span class="attr">total</span>: <span class="number">0</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">methods</span>: &#123;</div><div class="line">    <span class="attr">incrementTotal</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">this</span>.total += <span class="number">1</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.component(<span class="string">'button-counter'</span>, &#123;</div><div class="line">  <span class="attr">template</span>: <span class="string">'&lt;button v-on:click="incrementCounter"&gt;&#123;&#123; counter &#125;&#125;&lt;/button&gt;'</span>,</div><div class="line">  <span class="attr">data</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      <span class="attr">counter</span>: <span class="number">0</span></div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">methods</span>: &#123;</div><div class="line">    <span class="attr">incrementCounter</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">this</span>.counter += <span class="number">1</span></div><div class="line">      <span class="keyword">this</span>.$emit(<span class="string">'increment'</span>)</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">el</span>: <span class="string">'#counter-event-example'</span>,</div><div class="line">  <span class="attr">data</span>: &#123;</div><div class="line">    <span class="attr">total</span>: <span class="number">0</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">methods</span>: &#123;</div><div class="line">    <span class="attr">incrementTotal</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="keyword">this</span>.total += <span class="number">1</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 
 <div id="counter-event-example" class="demo">
   <p>{{ total }}</p>
@@ -835,14 +835,14 @@ new Vue({
 </div>
 <script>
 Vue.component('button-counter', {
-  template: '<button v-on:click="increment">{{ counter }}</button>',
+  template: '<button v-on:click="incrementCounter">{{ counter }}</button>',
   data: function () {
     return {
       counter: 0
     }
   },
   methods: {
-    increment: function () {
+    incrementCounter: function () {
       this.counter += 1
       this.$emit('increment')
     }
@@ -862,7 +862,7 @@ new Vue({
 </script>
 
 <p>在本例中，子组件已经和它外部完全解耦了。它所做的只是报告自己的内部事件，至于父组件是否关心则与它无关。留意到这一点很重要。</p>
-<h4 id="给组件绑定原生事件"><a href="#给组件绑定原生事件" class="headerlink" title="给组件绑定原生事件"></a>给组件绑定原生事件</h4><p>有时候，你可能想在某个组件的根元素上监听一个原生事件。可以使用 <code>.native</code> 修饰 <code>v-on</code>。例如：</p>
+<h3 id="给组件绑定原生事件"><a href="#给组件绑定原生事件" class="headerlink" title="给组件绑定原生事件"></a>给组件绑定原生事件</h3><p>有时候，你可能想在某个组件的根元素上监听一个原生事件。可以使用 <code>.native</code> 修饰 <code>v-on</code>。例如：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">my-component</span> <span class="attr">v-on:click.native</span>=<span class="string">"doTheThing"</span>&gt;</span><span class="tag">&lt;/<span class="name">my-component</span>&gt;</span></div></pre></td></tr></table></figure>
 <h3 id="sync-修饰符"><a href="#sync-修饰符" class="headerlink" title=".sync 修饰符"></a><code>.sync</code> 修饰符</h3><blockquote>
 <p>2.3.0+</p>
