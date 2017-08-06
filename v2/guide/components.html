@@ -813,7 +813,7 @@ new Vue({
 <li><code>date-picker-theme-dark</code>，从父组件传进来的</li>
 </ul>
 <p>对于多数特性来说，传递给组件的值会覆盖组件本身设定的值。即例如传递 <code>type=&quot;large&quot;</code> 将会覆盖 <code>type=&quot;date&quot;</code> 且有可能破坏该组件！索性我们对待 <code>class</code> 和 <code>style</code> 特性会更聪明一些，这两个特性的值都会做合并 (merge) 操作，让最终生成的值为：<code>form-control date-picker-theme-dark</code>。</p>
-<h2 id="自定义事件"><a href="#自定义事件" class="headerlink" title="自定义事件"></a>自定义事件</h2><p>我们知道，父组件是使用 props 传递数据给子组件，但如果子组件要把数据传递回去，应该怎样做？那就是自定义事件！</p>
+<h2 id="自定义事件"><a href="#自定义事件" class="headerlink" title="自定义事件"></a>自定义事件</h2><p>我们知道，父组件是使用 props 传递数据给子组件，但子组件怎么跟父组件通信呢？这个时候 Vue 的自定义事件系统就派得上用场了。</p>
 <h3 id="使用-v-on-绑定自定义事件"><a href="#使用-v-on-绑定自定义事件" class="headerlink" title="使用 v-on 绑定自定义事件"></a>使用 <code>v-on</code> 绑定自定义事件</h3><p>每个 Vue 实例都实现了<a href="../api/#实例方法-事件">事件接口 (Events interface)</a>，即：</p>
 <ul>
 <li>使用 <code>$on(eventName)</code> 监听事件</li>
