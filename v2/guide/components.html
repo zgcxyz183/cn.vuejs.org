@@ -66,7 +66,7 @@
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
           })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-          ga('create', 'UA-46852172-1', 'cn.vuejs.org');
+          ga('create', 'UA-46852172-3', 'cn.vuejs.org');
           ga('send', 'pageview');
         </script>
     </head>
@@ -1071,7 +1071,7 @@ new Vue({
 <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">Failed to mount component: template or render function not defined.</div></pre></td></tr></table></figure>
 <p>为了解释为什么会报错，简单的将上面两个组件称为 A 和 B，模块系统看到它需要 A，但是首先 A 需要 B，但是 B 需要 A，而 A 需要 B，陷入了一个无限循环，因此不知道到底应该先解决哪个。要解决这个问题，我们需要在其中一个组件中 (比如 A) 告诉模块化管理系统，“A 虽然需要 B，但是不需要优先导入 B”</p>
 <p>在我们的例子中，我们选择在<code>tree-folder</code> 组件中来告诉模块化管理系统循环引用的组件间的处理优先级，我们知道引起矛盾的子组件是<code>tree-folder-contents</code>，所以我们在<code>beforeCreate</code> 生命周期钩子中去注册它：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">beforeCreate: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">this</span>.$options.components.TreeFolderContents = <span class="built_in">require</span>(<span class="string">'./tree-folder-contents.vue'</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">beforeCreate: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">this</span>.$options.components.TreeFolderContents = <span class="built_in">require</span>(<span class="string">'./tree-folder-contents.vue'</span>).default</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>问题解决了。</p>
 <h3 id="内联模版"><a href="#内联模版" class="headerlink" title="内联模版"></a>内联模版</h3><p>如果子组件有 <code>inline-template</code> 特性，组件将把它的内容当作它的模板，而不是把它当作分发内容。这让模板更灵活。</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">my-component</span> <span class="attr">inline-template</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>These are compiled as the component's own template.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>Not parent's transclusion content.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">my-component</span>&gt;</span></div></pre></td></tr></table></figure>

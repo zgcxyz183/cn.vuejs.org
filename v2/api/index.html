@@ -66,7 +66,7 @@
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
           })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-          ga('create', 'UA-46852172-1', 'cn.vuejs.org');
+          ga('create', 'UA-46852172-3', 'cn.vuejs.org');
           ga('send', 'pageview');
         </script>
     </head>
@@ -1507,7 +1507,7 @@
 </li>
 </ul>
 <h2 id="特殊属性"><a href="#特殊属性" class="headerlink" title="特殊属性"></a>特殊属性</h2><h3 id="key"><a href="#key" class="headerlink" title="key"></a>key</h3><ul>
-<li><p><strong>预期：</strong> <code>string</code></p>
+<li><p><strong>预期：</strong> <code>number | string</code></p>
 <p><code>key</code> 的特殊属性主要用在 Vue的虚拟DOM算法，在新旧nodes对比时辨识VNodes。如果不使用key，Vue会使用一种最大限度减少动态元素并且尽可能的尝试修复/再利用相同类型元素的算法。使用key，它会基于key的变化重新排列元素顺序，并且会移除key不存在的元素。</p>
 <p>有相同父元素的子元素必须有<strong>独特的key</strong>。重复的key会造成渲染错误。</p>
 <p>最常见的用例是结合 <code>v-for</code>:</p>
