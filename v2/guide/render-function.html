@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
     <head>
-        <title>Render 函数 — Vue.js</title>
+        <title>Render 函数 & JSX — Vue.js</title>
         <meta charset="utf-8">
         <meta name="description" content="Vue.js - The Progressive JavaScript Framework">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -16,12 +16,12 @@
         <link rel="alternate" hreflang="fr" href="https://fr.vuejs.org/v2/guide/render-function.html">
 
         <meta property="og:type" content="article">
-        <meta property="og:title" content="Render 函数 — Vue.js">
+        <meta property="og:title" content="Render 函数 & JSX — Vue.js">
         <meta property="og:description" content="Vue.js - The Progressive JavaScript Framework">
         <meta property="og:image" content="https://cn.vuejs.org//images/logo.png">
 
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:title" content="Render 函数 — Vue.js">
+        <meta name="twitter:title" content="Render 函数 & JSX — Vue.js">
         <meta name="twitter:description" content="Vue.js - The Progressive JavaScript Framework">
         <meta name="twitter:image" content="https://cn.vuejs.org/images/logo.png">
 
@@ -93,7 +93,7 @@
   <ul class="nav-dropdown">
     <li><h4>帮助</h4></li>
     <li><ul>
-      <li><a href="http://forum.vuejs.org/" class="nav-link" target="_blank">论坛</a></li>
+      <li><a href="https://forum.vuejs.org/" class="nav-link" target="_blank">论坛</a></li>
       <li><a href="https://chat.vuejs.org/" class="nav-link" target="_blank">聊天室</a></li>
       <li><a href="https://github.com/vuejs-templates" class="nav-link" target="_blank">模板</a></li>
     </ul></li>
@@ -157,7 +157,7 @@
   <ul class="nav-dropdown">
     <li><h4>帮助</h4></li>
     <li><ul>
-      <li><a href="http://forum.vuejs.org/" class="nav-link" target="_blank">论坛</a></li>
+      <li><a href="https://forum.vuejs.org/" class="nav-link" target="_blank">论坛</a></li>
       <li><a href="https://chat.vuejs.org/" class="nav-link" target="_blank">聊天室</a></li>
       <li><a href="https://github.com/vuejs-templates" class="nav-link" target="_blank">模板</a></li>
     </ul></li>
@@ -228,6 +228,9 @@
             
             
             
+            
+            
+            
         
         
         <li>
@@ -236,6 +239,9 @@
     
         
         
+            
+            
+            
             
             
             
@@ -252,6 +258,9 @@
             
             
             
+            
+            
+            
         
         
         <li>
@@ -260,6 +269,9 @@
     
         
         
+            
+            
+            
             
             
             
@@ -276,14 +288,20 @@
             
             
             
+            
+            
+            
         
         
         <li>
-            <a href="/v2/guide/computed.html" class="sidebar-link">计算属性</a>
+            <a href="/v2/guide/computed.html" class="sidebar-link">计算属性和观察者</a>
         </li>
     
         
         
+            
+            
+            
             
             
             
@@ -300,6 +318,9 @@
             
             
             
+            
+            
+            
         
         
         <li>
@@ -308,6 +329,9 @@
     
         
         
+            
+            
+            
             
             
             
@@ -324,10 +348,13 @@
             
             
             
+            
+            
+            
         
         
         <li>
-            <a href="/v2/guide/events.html" class="sidebar-link">事件处理器</a>
+            <a href="/v2/guide/events.html" class="sidebar-link">事件处理</a>
         </li>
     
         
@@ -336,14 +363,20 @@
             
             
             
+            
+            
+            
         
         
         <li>
-            <a href="/v2/guide/forms.html" class="sidebar-link">表单控件绑定</a>
+            <a href="/v2/guide/forms.html" class="sidebar-link">表单输入绑定</a>
         </li>
     
         
         
+            
+            
+            
             
             
             
@@ -358,14 +391,17 @@
         
             
             
-                <li><h3>进阶</h3></li>
+                <li><h3>过渡 & 动画</h3></li>
+            
+            
+            
             
             
             
         
         
         <li>
-            <a href="/v2/guide/reactivity.html" class="sidebar-link">深入响应式原理</a>
+            <a href="/v2/guide/transitions.html" class="sidebar-link">进入/离开 & 列表过渡</a>
         </li>
     
         
@@ -374,10 +410,13 @@
             
             
             
+            
+            
+            
         
         
         <li>
-            <a href="/v2/guide/transitions.html" class="sidebar-link">过渡效果</a>
+            <a href="/v2/guide/transitioning-state.html" class="sidebar-link">状态过渡</a>
         </li>
     
         
@@ -385,39 +424,8 @@
             
             
             
+                <li><h3>可复用性 & 组合</h3></li>
             
-        
-        
-        <li>
-            <a href="/v2/guide/transitioning-state.html" class="sidebar-link">过渡状态</a>
-        </li>
-    
-        
-        
-            
-            
-            
-            
-        
-        
-        <li>
-            <a href="/v2/guide/render-function.html" class="sidebar-link current">Render 函数</a>
-        </li>
-    
-        
-        
-            
-            
-            
-            
-        
-        
-        <li>
-            <a href="/v2/guide/custom-directive.html" class="sidebar-link">自定义指令</a>
-        </li>
-    
-        
-        
             
             
             
@@ -434,6 +442,39 @@
             
             
             
+            
+            
+            
+        
+        
+        <li>
+            <a href="/v2/guide/custom-directive.html" class="sidebar-link">自定义指令</a>
+        </li>
+    
+        
+        
+            
+            
+            
+            
+            
+            
+            
+        
+        
+        <li>
+            <a href="/v2/guide/render-function.html" class="sidebar-link current">Render 函数 & JSX</a>
+        </li>
+    
+        
+        
+            
+            
+            
+            
+            
+            
+            
         
         
         <li>
@@ -442,6 +483,41 @@
     
         
         
+            
+            
+            
+            
+            
+            
+            
+        
+        
+        <li>
+            <a href="/v2/guide/filters.html" class="sidebar-link">过滤器</a>
+        </li>
+    
+        
+        
+            
+            
+            
+            
+                <li><h3>工具</h3></li>
+            
+            
+            
+            
+        
+        
+        <li>
+            <a href="/v2/guide/deployment.html" class="sidebar-link">生产环境部署</a>
+        </li>
+    
+        
+        
+            
+            
+            
             
             
             
@@ -458,15 +534,38 @@
             
             
             
+            
+            
+            
         
         
         <li>
-            <a href="/v2/guide/deployment.html" class="sidebar-link">生产环境部署提示</a>
+            <a href="/v2/guide/unit-testing.html" class="sidebar-link">单元测试</a>
         </li>
     
         
         
             
+            
+            
+            
+            
+            
+            
+        
+        
+        <li>
+            <a href="/v2/guide/typescript.html" class="sidebar-link">TypeScript 支持</a>
+        </li>
+    
+        
+        
+            
+            
+            
+            
+            
+                <li><h3>规模化</h3></li>
             
             
             
@@ -478,6 +577,9 @@
     
         
         
+            
+            
+            
             
             
             
@@ -494,15 +596,6 @@
             
             
             
-        
-        
-        <li>
-            <a href="/v2/guide/unit-testing.html" class="sidebar-link">单元测试</a>
-        </li>
-    
-        
-        
-            
             
             
             
@@ -517,15 +610,6 @@
             
             
             
-            
-        
-        
-        <li>
-            <a href="/v2/guide/typescript.html" class="sidebar-link">TypeScript 支持</a>
-        </li>
-    
-        
-        
             
             
             
@@ -544,6 +628,9 @@
             
             
             
+            
+            
+            
         
         
         <li>
@@ -556,6 +643,9 @@
             
             
             
+            
+            
+            
         
         
         <li>
@@ -564,6 +654,9 @@
     
         
         
+            
+            
+            
             
             
             
@@ -582,6 +675,9 @@
             
             
             
+            
+            
+            
         
         
         <li>
@@ -590,6 +686,9 @@
     
         
         
+            
+            
+            
             
             
             
@@ -615,7 +714,7 @@
       
     
     
-      <h1>Render 函数</h1>
+      <h1>Render 函数 & JSX</h1>
     
     
     <h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><p>Vue 推荐在绝大多数情况下使用 template 来创建你的 HTML。然而在一些场景中，你真的需要 JavaScript 的完全编程的能力，这就是 <strong>render 函数</strong>，它比 template 更接近编译器。</p>
@@ -629,7 +728,20 @@
 <p>虽然模板在大多数组件中都非常好用，但是在这里它就不是很简洁的了。那么，我们来尝试使用 <code>render</code> 函数重写上面的例子：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.component(<span class="string">'anchored-heading'</span>, &#123;</div><div class="line">  <span class="attr">render</span>: <span class="function"><span class="keyword">function</span> (<span class="params">createElement</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> createElement(</div><div class="line">      <span class="string">'h'</span> + <span class="keyword">this</span>.level,   <span class="comment">// tag name 标签名称</span></div><div class="line">      <span class="keyword">this</span>.$slots.default <span class="comment">// 子组件中的阵列</span></div><div class="line">    )</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">props</span>: &#123;</div><div class="line">    <span class="attr">level</span>: &#123;</div><div class="line">      <span class="attr">type</span>: <span class="built_in">Number</span>,</div><div class="line">      <span class="attr">required</span>: <span class="literal">true</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>简单清晰很多！简单来说，这样代码精简很多，但是需要非常熟悉 Vue 的实例属性。在这个例子中，你需要知道当你不使用 <code>slot</code>  属性向组件中传递内容时，比如 <code>anchored-heading</code> 中的 <code>Hello world!</code>, 这些子元素被存储在组件实例中的 <code>$slots.default</code>中。如果你还不了解，<strong> 在深入 render 函数之前推荐阅读 <a href="../api/#实例属性">实例属性API</a>。</strong></p>
-<h2 id="createElement-参数"><a href="#createElement-参数" class="headerlink" title="createElement 参数"></a><code>createElement</code> 参数</h2><p>第二件你需要熟悉的是如何在 <code>createElement</code> 函数中生成模板。这里是 <code>createElement</code> 接受的参数：</p>
+<h2 id="Nodes-Trees-and-the-Virtual-DOM"><a href="#Nodes-Trees-and-the-Virtual-DOM" class="headerlink" title="Nodes, Trees, and the Virtual DOM"></a>Nodes, Trees, and the Virtual DOM</h2><!-- todo translation -->Before we dive into render functions, it’s important to know a little about how browsers work. Take this HTML for example:<br><br><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h1</span>&gt;</span>My title<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">  Some text content</div><div class="line">  <span class="comment">&lt;!-- <span class="doctag">TODO:</span> Add tagline  --&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>When a browser reads this code, it builds a <a href="https://javascript.info/dom-nodes" target="_blank" rel="external">tree of “DOM nodes”</a> to help it keep track of everything, just as you might build a family tree to keep track of your extended family.</p>
+<p>The tree of DOM nodes for the HTML above looks like this:</p>
+<p><img src="/images/dom-tree.png" alt="DOM Tree Visualization"></p>
+<p>Every element is a node. Every piece of text is a node. Even comments are nodes! A node is just a piece of the page. And just as in a family tree, each node can have children (i.e. each piece can contain other pieces).</p>
+<p>Updating all these nodes efficiently can be difficult, but thankfully, you never have to do it manually. You just tell Vue what HTML you want on the page, in a template:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>&#123;&#123; blogTitle &#125;&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Or a render function:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">render: <span class="function"><span class="keyword">function</span> (<span class="params">createElement</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> createElement(<span class="string">'h1'</span>, <span class="keyword">this</span>.blogTitle)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>And in both cases, Vue automatically keeps the page updated, even when <code>blogTitle</code> changes.</p>
+<h3 id="The-Virtual-DOM"><a href="#The-Virtual-DOM" class="headerlink" title="The Virtual DOM"></a>The Virtual DOM</h3><p>Vue accomplishes this by building a <strong>virtual DOM</strong> to keep track of the changes it needs to make to the real DOM. Taking a closer look at this line:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">return</span> createElement(<span class="string">'h1'</span>, <span class="keyword">this</span>.blogTitle)</div></pre></td></tr></table></figure>
+<p>What is <code>createElement</code> actually returning? It’s not <em>exactly</em> a real DOM element. It could perhaps more accurately be named <code>createNodeDescription</code>, as it contains information describing to Vue what kind of node it should render on the page, including descriptions of any child nodes. We call this node description a “virtual node”, usually abbreviated to <strong>VNode</strong>. “Virtual DOM” is what we call the entire tree of VNodes, built by a tree of Vue components.</p>
+<h2 id="createElement-参数"><a href="#createElement-参数" class="headerlink" title="createElement 参数"></a><code>createElement</code> 参数</h2><p>接下来你需要熟悉的是如何在 <code>createElement</code> 函数中生成模板。这里是 <code>createElement</code> 接受的参数：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// @returns &#123;VNode&#125;</span></div><div class="line">createElement(</div><div class="line">  <span class="comment">// &#123;String | Object | Function&#125;</span></div><div class="line">  <span class="comment">// 一个 HTML 标签字符串，组件选项对象，或者一个返回值类型为String/Object的函数，必要参数</span></div><div class="line">  <span class="string">'div'</span>,</div><div class="line"></div><div class="line">  <span class="comment">// &#123;Object&#125;</span></div><div class="line">  <span class="comment">// 一个包含模板相关属性的数据对象</span></div><div class="line">  <span class="comment">// 这样，您可以在 template 中使用这些属性.可选参数.</span></div><div class="line">  &#123;</div><div class="line">    <span class="comment">// (详情见下一节)</span></div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  <span class="comment">// &#123;String | Array&#125;</span></div><div class="line">  <span class="comment">// 子节点 (VNodes)，由 `createElement()` 构建而成，</span></div><div class="line">  <span class="comment">// 或简单的使用字符串来生成“文本结点”。可选参数。</span></div><div class="line">  [</div><div class="line">    <span class="string">'先写一些文字'</span>,</div><div class="line">    createElement(<span class="string">'h1'</span>, <span class="string">'一则头条'</span>),</div><div class="line">    createElement(MyComponent, &#123;</div><div class="line">      <span class="attr">props</span>: &#123;</div><div class="line">        <span class="attr">someProp</span>: <span class="string">'foobar'</span></div><div class="line">      &#125;</div><div class="line">    &#125;)</div><div class="line">  ]</div><div class="line">)</div></pre></td></tr></table></figure>
 <h3 id="深入data-object参数"><a href="#深入data-object参数" class="headerlink" title="深入data object参数"></a>深入data object参数</h3><p>有一件事要注意：正如在模板语法中，<code>v-bind:class</code> 和  <code>v-bind:style</code> ，会被特别对待一样，在 VNode 数据对象中，下列属性名是级别最高的字段。该对象也允许你绑定普通的 HTML 特性，就像 DOM 属性一样，比如 <code>innerHTML</code> (这会取代 <code>v-html</code> 指令)。</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="comment">// 和`v-bind:class`一样的 API</span></div><div class="line">  <span class="string">'class'</span>: &#123;</div><div class="line">    <span class="attr">foo</span>: <span class="literal">true</span>,</div><div class="line">    <span class="attr">bar</span>: <span class="literal">false</span></div><div class="line">  &#125;,</div><div class="line">  <span class="comment">// 和`v-bind:style`一样的 API</span></div><div class="line">  style: &#123;</div><div class="line">    <span class="attr">color</span>: <span class="string">'red'</span>,</div><div class="line">    <span class="attr">fontSize</span>: <span class="string">'14px'</span></div><div class="line">  &#125;,</div><div class="line">  <span class="comment">// 正常的 HTML 特性</span></div><div class="line">  attrs: &#123;</div><div class="line">    <span class="attr">id</span>: <span class="string">'foo'</span></div><div class="line">  &#125;,</div><div class="line">  <span class="comment">// 组件 props</span></div><div class="line">  props: &#123;</div><div class="line">    <span class="attr">myProp</span>: <span class="string">'bar'</span></div><div class="line">  &#125;,</div><div class="line">  <span class="comment">// DOM 属性</span></div><div class="line">  domProps: &#123;</div><div class="line">    <span class="attr">innerHTML</span>: <span class="string">'baz'</span></div><div class="line">  &#125;,</div><div class="line">  <span class="comment">// 事件监听器基于 `on`</span></div><div class="line">  <span class="comment">// 所以不再支持如 `v-on:keyup.enter` 修饰器</span></div><div class="line">  <span class="comment">// 需要手动匹配 keyCode。</span></div><div class="line">  on: &#123;</div><div class="line">    <span class="attr">click</span>: <span class="keyword">this</span>.clickHandler</div><div class="line">  &#125;,</div><div class="line">  <span class="comment">// 仅对于组件，用于监听原生事件，而不是组件内部使用 `vm.$emit` 触发的事件。</span></div><div class="line">  nativeOn: &#123;</div><div class="line">    <span class="attr">click</span>: <span class="keyword">this</span>.nativeClickHandler</div><div class="line">  &#125;,</div><div class="line">  <span class="comment">// 自定义指令. 注意事项：不能对绑定的旧值设值</span></div><div class="line">  <span class="comment">// Vue 会为您持续追踪</span></div><div class="line">  directives: [</div><div class="line">    &#123;</div><div class="line">      <span class="attr">name</span>: <span class="string">'my-custom-directive'</span>,</div><div class="line">      <span class="attr">value</span>: <span class="string">'2'</span>,</div><div class="line">      <span class="attr">expression</span>: <span class="string">'1 + 1'</span>,</div><div class="line">      <span class="attr">arg</span>: <span class="string">'foo'</span>,</div><div class="line">      <span class="attr">modifiers</span>: &#123;</div><div class="line">        <span class="attr">bar</span>: <span class="literal">true</span></div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  ],</div><div class="line">  <span class="comment">// Scoped slots in the form of</span></div><div class="line">  <span class="comment">// &#123; name: props =&gt; VNode | Array&lt;VNode&gt; &#125;</span></div><div class="line">  scopedSlots: &#123;</div><div class="line">    <span class="attr">default</span>: <span class="function"><span class="params">props</span> =&gt;</span> createElement(<span class="string">'span'</span>, props.text)</div><div class="line">  &#125;,</div><div class="line">  <span class="comment">// 如果组件是其他组件的子组件，需为 slot 指定名称</span></div><div class="line">  slot: <span class="string">'name-of-slot'</span>,</div><div class="line">  <span class="comment">// 其他特殊顶层属性</span></div><div class="line">  key: <span class="string">'myKey'</span>,</div><div class="line">  <span class="attr">ref</span>: <span class="string">'myRef'</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -837,10 +949,10 @@ console.error = function (error) {
     
       <div class="guide-links">
         
-          <span>← <a href="/v2/guide/transitioning-state.html">过渡状态</a></span>
+          <span>← <a href="/v2/guide/custom-directive.html">自定义指令</a></span>
         
         
-          <span style="float:right"><a href="/v2/guide/custom-directive.html">自定义指令</a> →</span>
+          <span style="float:right"><a href="/v2/guide/plugins.html">插件</a> →</span>
         
       </div>
     

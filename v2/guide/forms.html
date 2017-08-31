@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
     <head>
-        <title>表单控件绑定 — Vue.js</title>
+        <title>表单输入绑定 — Vue.js</title>
         <meta charset="utf-8">
         <meta name="description" content="Vue.js - The Progressive JavaScript Framework">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -16,12 +16,12 @@
         <link rel="alternate" hreflang="fr" href="https://fr.vuejs.org/v2/guide/forms.html">
 
         <meta property="og:type" content="article">
-        <meta property="og:title" content="表单控件绑定 — Vue.js">
+        <meta property="og:title" content="表单输入绑定 — Vue.js">
         <meta property="og:description" content="Vue.js - The Progressive JavaScript Framework">
         <meta property="og:image" content="https://cn.vuejs.org//images/logo.png">
 
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:title" content="表单控件绑定 — Vue.js">
+        <meta name="twitter:title" content="表单输入绑定 — Vue.js">
         <meta name="twitter:description" content="Vue.js - The Progressive JavaScript Framework">
         <meta name="twitter:image" content="https://cn.vuejs.org/images/logo.png">
 
@@ -93,7 +93,7 @@
   <ul class="nav-dropdown">
     <li><h4>帮助</h4></li>
     <li><ul>
-      <li><a href="http://forum.vuejs.org/" class="nav-link" target="_blank">论坛</a></li>
+      <li><a href="https://forum.vuejs.org/" class="nav-link" target="_blank">论坛</a></li>
       <li><a href="https://chat.vuejs.org/" class="nav-link" target="_blank">聊天室</a></li>
       <li><a href="https://github.com/vuejs-templates" class="nav-link" target="_blank">模板</a></li>
     </ul></li>
@@ -157,7 +157,7 @@
   <ul class="nav-dropdown">
     <li><h4>帮助</h4></li>
     <li><ul>
-      <li><a href="http://forum.vuejs.org/" class="nav-link" target="_blank">论坛</a></li>
+      <li><a href="https://forum.vuejs.org/" class="nav-link" target="_blank">论坛</a></li>
       <li><a href="https://chat.vuejs.org/" class="nav-link" target="_blank">聊天室</a></li>
       <li><a href="https://github.com/vuejs-templates" class="nav-link" target="_blank">模板</a></li>
     </ul></li>
@@ -228,6 +228,9 @@
             
             
             
+            
+            
+            
         
         
         <li>
@@ -236,6 +239,9 @@
     
         
         
+            
+            
+            
             
             
             
@@ -252,6 +258,9 @@
             
             
             
+            
+            
+            
         
         
         <li>
@@ -260,6 +269,9 @@
     
         
         
+            
+            
+            
             
             
             
@@ -276,14 +288,20 @@
             
             
             
+            
+            
+            
         
         
         <li>
-            <a href="/v2/guide/computed.html" class="sidebar-link">计算属性</a>
+            <a href="/v2/guide/computed.html" class="sidebar-link">计算属性和观察者</a>
         </li>
     
         
         
+            
+            
+            
             
             
             
@@ -300,6 +318,9 @@
             
             
             
+            
+            
+            
         
         
         <li>
@@ -308,6 +329,9 @@
     
         
         
+            
+            
+            
             
             
             
@@ -324,10 +348,13 @@
             
             
             
+            
+            
+            
         
         
         <li>
-            <a href="/v2/guide/events.html" class="sidebar-link">事件处理器</a>
+            <a href="/v2/guide/events.html" class="sidebar-link">事件处理</a>
         </li>
     
         
@@ -336,14 +363,20 @@
             
             
             
+            
+            
+            
         
         
         <li>
-            <a href="/v2/guide/forms.html" class="sidebar-link current">表单控件绑定</a>
+            <a href="/v2/guide/forms.html" class="sidebar-link current">表单输入绑定</a>
         </li>
     
         
         
+            
+            
+            
             
             
             
@@ -358,14 +391,17 @@
         
             
             
-                <li><h3>进阶</h3></li>
+                <li><h3>过渡 & 动画</h3></li>
+            
+            
+            
             
             
             
         
         
         <li>
-            <a href="/v2/guide/reactivity.html" class="sidebar-link">深入响应式原理</a>
+            <a href="/v2/guide/transitions.html" class="sidebar-link">进入/离开 & 列表过渡</a>
         </li>
     
         
@@ -374,10 +410,13 @@
             
             
             
+            
+            
+            
         
         
         <li>
-            <a href="/v2/guide/transitions.html" class="sidebar-link">过渡效果</a>
+            <a href="/v2/guide/transitioning-state.html" class="sidebar-link">状态过渡</a>
         </li>
     
         
@@ -385,39 +424,8 @@
             
             
             
+                <li><h3>可复用性 & 组合</h3></li>
             
-        
-        
-        <li>
-            <a href="/v2/guide/transitioning-state.html" class="sidebar-link">过渡状态</a>
-        </li>
-    
-        
-        
-            
-            
-            
-            
-        
-        
-        <li>
-            <a href="/v2/guide/render-function.html" class="sidebar-link">Render 函数</a>
-        </li>
-    
-        
-        
-            
-            
-            
-            
-        
-        
-        <li>
-            <a href="/v2/guide/custom-directive.html" class="sidebar-link">自定义指令</a>
-        </li>
-    
-        
-        
             
             
             
@@ -434,6 +442,39 @@
             
             
             
+            
+            
+            
+        
+        
+        <li>
+            <a href="/v2/guide/custom-directive.html" class="sidebar-link">自定义指令</a>
+        </li>
+    
+        
+        
+            
+            
+            
+            
+            
+            
+            
+        
+        
+        <li>
+            <a href="/v2/guide/render-function.html" class="sidebar-link">Render 函数 & JSX</a>
+        </li>
+    
+        
+        
+            
+            
+            
+            
+            
+            
+            
         
         
         <li>
@@ -442,6 +483,41 @@
     
         
         
+            
+            
+            
+            
+            
+            
+            
+        
+        
+        <li>
+            <a href="/v2/guide/filters.html" class="sidebar-link">过滤器</a>
+        </li>
+    
+        
+        
+            
+            
+            
+            
+                <li><h3>工具</h3></li>
+            
+            
+            
+            
+        
+        
+        <li>
+            <a href="/v2/guide/deployment.html" class="sidebar-link">生产环境部署</a>
+        </li>
+    
+        
+        
+            
+            
+            
             
             
             
@@ -458,15 +534,38 @@
             
             
             
+            
+            
+            
         
         
         <li>
-            <a href="/v2/guide/deployment.html" class="sidebar-link">生产环境部署提示</a>
+            <a href="/v2/guide/unit-testing.html" class="sidebar-link">单元测试</a>
         </li>
     
         
         
             
+            
+            
+            
+            
+            
+            
+        
+        
+        <li>
+            <a href="/v2/guide/typescript.html" class="sidebar-link">TypeScript 支持</a>
+        </li>
+    
+        
+        
+            
+            
+            
+            
+            
+                <li><h3>规模化</h3></li>
             
             
             
@@ -478,6 +577,9 @@
     
         
         
+            
+            
+            
             
             
             
@@ -494,15 +596,6 @@
             
             
             
-        
-        
-        <li>
-            <a href="/v2/guide/unit-testing.html" class="sidebar-link">单元测试</a>
-        </li>
-    
-        
-        
-            
             
             
             
@@ -517,15 +610,6 @@
             
             
             
-            
-        
-        
-        <li>
-            <a href="/v2/guide/typescript.html" class="sidebar-link">TypeScript 支持</a>
-        </li>
-    
-        
-        
             
             
             
@@ -544,6 +628,9 @@
             
             
             
+            
+            
+            
         
         
         <li>
@@ -556,6 +643,9 @@
             
             
             
+            
+            
+            
         
         
         <li>
@@ -564,6 +654,9 @@
     
         
         
+            
+            
+            
             
             
             
@@ -582,6 +675,9 @@
             
             
             
+            
+            
+            
         
         
         <li>
@@ -590,6 +686,9 @@
     
         
         
+            
+            
+            
             
             
             
@@ -615,7 +714,7 @@
       
     
     
-      <h1>表单控件绑定</h1>
+      <h1>表单输入绑定</h1>
     
     
     <h2 id="基础用法"><a href="#基础用法" class="headerlink" title="基础用法"></a>基础用法</h2><p>你可以用 <code>v-model</code> 指令在表单控件元素上创建双向数据绑定。它会根据控件类型自动选取正确的方法来更新元素。尽管有些神奇，但 <code>v-model</code> 本质上不过是语法糖，它负责监听用户的输入事件以更新数据，并特别处理一些极端的例子。</p>
@@ -655,7 +754,7 @@ new Vue({
 })
 </script>
 
-<p class="tip">在文本区域插值( <code>&lt;textarea&gt;&lt;/textarea&gt;</code> ) 并不会生效，应用 <code>v-model</code> 来代替</p>
+<p class="tip">在文本区域插值( <code>&lt;textarea&gt;&lt;/textarea&gt;</code> ) 并不会生效，应用 <code>v-model</code> 来代替。</p>
 
 <h3 id="复选框"><a href="#复选框" class="headerlink" title="复选框"></a>复选框</h3><p>单个勾选框，逻辑值：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">id</span>=<span class="string">"checkbox"</span> <span class="attr">v-model</span>=<span class="string">"checked"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"checkbox"</span>&gt;</span>&#123;&#123; checked &#125;&#125;<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -674,8 +773,8 @@ new Vue({
 </script>
 
 <p>多个勾选框，绑定到同一个数组：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">id</span>=<span class="string">"jack"</span> <span class="attr">value</span>=<span class="string">"Jack"</span> <span class="attr">v-model</span>=<span class="string">"checkedNames"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"jack"</span>&gt;</span>Jack<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">id</span>=<span class="string">"john"</span> <span class="attr">value</span>=<span class="string">"John"</span> <span class="attr">v-model</span>=<span class="string">"checkedNames"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"john"</span>&gt;</span>John<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">id</span>=<span class="string">"mike"</span> <span class="attr">value</span>=<span class="string">"Mike"</span> <span class="attr">v-model</span>=<span class="string">"checkedNames"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"mike"</span>&gt;</span>Mike<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>Checked names: &#123;&#123; checkedNames &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">el</span>: <span class="string">'...'</span>,</div><div class="line">  <span class="attr">data</span>: &#123;</div><div class="line">    <span class="attr">checkedNames</span>: []</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">'example-3'</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">id</span>=<span class="string">"jack"</span> <span class="attr">value</span>=<span class="string">"Jack"</span> <span class="attr">v-model</span>=<span class="string">"checkedNames"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"jack"</span>&gt;</span>Jack<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">id</span>=<span class="string">"john"</span> <span class="attr">value</span>=<span class="string">"John"</span> <span class="attr">v-model</span>=<span class="string">"checkedNames"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"john"</span>&gt;</span>John<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">id</span>=<span class="string">"mike"</span> <span class="attr">value</span>=<span class="string">"Mike"</span> <span class="attr">v-model</span>=<span class="string">"checkedNames"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"mike"</span>&gt;</span>Mike<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">span</span>&gt;</span>Checked names: &#123;&#123; checkedNames &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">el</span>: <span class="string">'#example-3'</span>,</div><div class="line">  <span class="attr">data</span>: &#123;</div><div class="line">    <span class="attr">checkedNames</span>: []</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 
 <div id="example-3">
   <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
@@ -717,7 +816,7 @@ new Vue({
 })
 </script>
 
-<h3 id="选择列表"><a href="#选择列表" class="headerlink" title="选择列表"></a>选择列表</h3><p>单选列表:</p>
+<h3 id="选择列表"><a href="#选择列表" class="headerlink" title="选择列表"></a>选择列表</h3><p>单选列表：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"example-5"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">select</span> <span class="attr">v-model</span>=<span class="string">"selected"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">disabled</span> <span class="attr">value</span>=<span class="string">""</span>&gt;</span>请选择<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">option</span>&gt;</span>A<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">option</span>&gt;</span>B<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">option</span>&gt;</span>C<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">select</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">span</span>&gt;</span>Selected: &#123;&#123; selected &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">el</span>: <span class="string">'...'</span>,</div><div class="line">  <span class="attr">data</span>: &#123;</div><div class="line">    <span class="attr">selected</span>: <span class="string">''</span></div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 
@@ -797,7 +896,7 @@ new Vue({
 <h3 id="单选按钮-1"><a href="#单选按钮-1" class="headerlink" title="单选按钮"></a>单选按钮</h3><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">v-model</span>=<span class="string">"pick"</span> <span class="attr">v-bind:value</span>=<span class="string">"a"</span>&gt;</span></div></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// 当选中时</span></div><div class="line">vm.pick === vm.a</div></pre></td></tr></table></figure>
 <h3 id="选择列表设置"><a href="#选择列表设置" class="headerlink" title="选择列表设置"></a>选择列表设置</h3><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">v-model</span>=<span class="string">"selected"</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- 内联对象字面量 --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">v-bind:value</span>=<span class="string">"&#123; number: 123 &#125;"</span>&gt;</span>123<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// 当选中时</span></div><div class="line"><span class="keyword">typeof</span> vm.selected <span class="comment">// -&gt; 'object'</span></div><div class="line">vm.selected.number <span class="comment">// -&gt; 123</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// 当选中时</span></div><div class="line"><span class="keyword">typeof</span> vm.selected <span class="comment">// =&gt; 'object'</span></div><div class="line">vm.selected.number <span class="comment">// =&gt; 123</span></div></pre></td></tr></table></figure>
 <h2 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a>修饰符</h2><h3 id="lazy"><a href="#lazy" class="headerlink" title=".lazy"></a><code>.lazy</code></h3><p>在默认情况下， <code>v-model</code> 在 <code>input</code> 事件中同步输入框的值与数据 (除了 <a href="#vmodel-ime-tip">上述</a> IME 部分)，但你可以添加一个修饰符 <code>lazy</code> ，从而转变为在 <code>change</code> 事件中同步：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 在 "change" 而不是 "input" 事件中更新 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">v-model.lazy</span>=<span class="string">"msg"</span> &gt;</span></div></pre></td></tr></table></figure>
 <h3 id="number"><a href="#number" class="headerlink" title=".number"></a><code>.number</code></h3><p>如果想自动将用户的输入值转为 Number 类型（如果原值的转换结果为 NaN 则返回原值），可以添加一个修饰符 <code>number</code> 给 <code>v-model</code> 来处理输入值：</p>
@@ -808,7 +907,7 @@ new Vue({
 <h2 id="v-model-与组件"><a href="#v-model-与组件" class="headerlink" title="v-model 与组件"></a><code>v-model</code> 与组件</h2><blockquote>
 <p>如果你还不熟悉Vue的组件，跳过这里即可。</p>
 </blockquote>
-<p>HTML 内建的 input 类型有时不能满足你的需求。还好，Vue 的组件系统允许你创建一个具有自定义行为可复用的 input 类型，这些 input 类型甚至可以和 <code>v-model</code> 一起使用！要了解更多，请参阅<a href="components.html#使用自定义事件的表单输入组件">自定义 input 类型</a></p>
+<p>HTML 内建的 input 类型有时不能满足你的需求。还好，Vue 的组件系统允许你创建一个具有自定义行为可复用的 input 类型，这些 input 类型甚至可以和 <code>v-model</code> 一起使用！要了解更多，请参阅<a href="components.html#使用自定义事件的表单输入组件">自定义 input 类型</a>。</p>
 <hr>
 <blockquote>
 <p>原文：<a href="http://vuejs.org/guide/forms.html" target="_blank" rel="external">http://vuejs.org/guide/forms.html</a></p>
@@ -818,7 +917,7 @@ new Vue({
     
       <div class="guide-links">
         
-          <span>← <a href="/v2/guide/events.html">事件处理器</a></span>
+          <span>← <a href="/v2/guide/events.html">事件处理</a></span>
         
         
           <span style="float:right"><a href="/v2/guide/components.html">组件</a> →</span>

@@ -2,26 +2,26 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
     <head>
-        <title>Class 与 Style 绑定 — Vue.js</title>
+        <title>过滤器 — Vue.js</title>
         <meta charset="utf-8">
         <meta name="description" content="Vue.js - The Progressive JavaScript Framework">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-        <link rel="alternate" hreflang="x-default" href="https://vuejs.org/v2/guide/class-and-style.html">
-        <link rel="alternate" hreflang="zh" href="https://cn.vuejs.org/v2/guide/class-and-style.html">
-        <link rel="alternate" hreflang="ja" href="https://jp.vuejs.org/v2/guide/class-and-style.html">
-        <link rel="alternate" hreflang="ru" href="https://ru.vuejs.org/v2/guide/class-and-style.html">
-        <link rel="alternate" hreflang="ko" href="https://kr.vuejs.org/v2/guide/class-and-style.html">
-        <link rel="alternate" hreflang="pt-BR" href="https://br.vuejs.org/v2/guide/class-and-style.html">
-        <link rel="alternate" hreflang="fr" href="https://fr.vuejs.org/v2/guide/class-and-style.html">
+        <link rel="alternate" hreflang="x-default" href="https://vuejs.org/v2/guide/filters.html">
+        <link rel="alternate" hreflang="zh" href="https://cn.vuejs.org/v2/guide/filters.html">
+        <link rel="alternate" hreflang="ja" href="https://jp.vuejs.org/v2/guide/filters.html">
+        <link rel="alternate" hreflang="ru" href="https://ru.vuejs.org/v2/guide/filters.html">
+        <link rel="alternate" hreflang="ko" href="https://kr.vuejs.org/v2/guide/filters.html">
+        <link rel="alternate" hreflang="pt-BR" href="https://br.vuejs.org/v2/guide/filters.html">
+        <link rel="alternate" hreflang="fr" href="https://fr.vuejs.org/v2/guide/filters.html">
 
         <meta property="og:type" content="article">
-        <meta property="og:title" content="Class 与 Style 绑定 — Vue.js">
+        <meta property="og:title" content="过滤器 — Vue.js">
         <meta property="og:description" content="Vue.js - The Progressive JavaScript Framework">
         <meta property="og:image" content="https://cn.vuejs.org//images/logo.png">
 
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:title" content="Class 与 Style 绑定 — Vue.js">
+        <meta name="twitter:title" content="过滤器 — Vue.js">
         <meta name="twitter:description" content="Vue.js - The Progressive JavaScript Framework">
         <meta name="twitter:image" content="https://cn.vuejs.org/images/logo.png">
 
@@ -120,12 +120,12 @@
 <li class="nav-dropdown-container language">
   <a class="nav-link">多语言</a><span class="arrow"></span>
   <ul class="nav-dropdown">
-    <li><a href="https://vuejs.org/v2/guide/class-and-style.html" class="nav-link" target="_blank">English</a></li>
-    <li><a href="https://jp.vuejs.org/v2/guide/class-and-style.html" class="nav-link" target="_blank">日本語</a></li>
-    <li><a href="https://ru.vuejs.org/v2/guide/class-and-style.html" class="nav-link" target="_blank">Русский</a></li>
-    <li><a href="https://kr.vuejs.org/v2/guide/class-and-style.html" class="nav-link" target="_blank">한국어</a></li>
-    <li><a href="https://br.vuejs.org/v2/guide/class-and-style.html" class="nav-link" target="_blank">Português</a></li>
-    <li><a href="https://fr.vuejs.org/v2/guide/class-and-style.html" class="nav-link" target="_blank">Français</a></li>
+    <li><a href="https://vuejs.org/v2/guide/filters.html" class="nav-link" target="_blank">English</a></li>
+    <li><a href="https://jp.vuejs.org/v2/guide/filters.html" class="nav-link" target="_blank">日本語</a></li>
+    <li><a href="https://ru.vuejs.org/v2/guide/filters.html" class="nav-link" target="_blank">Русский</a></li>
+    <li><a href="https://kr.vuejs.org/v2/guide/filters.html" class="nav-link" target="_blank">한국어</a></li>
+    <li><a href="https://br.vuejs.org/v2/guide/filters.html" class="nav-link" target="_blank">Português</a></li>
+    <li><a href="https://fr.vuejs.org/v2/guide/filters.html" class="nav-link" target="_blank">Français</a></li>
   </ul>
 </li>
 
@@ -184,12 +184,12 @@
 <li class="nav-dropdown-container language">
   <a class="nav-link">多语言</a><span class="arrow"></span>
   <ul class="nav-dropdown">
-    <li><a href="https://vuejs.org/v2/guide/class-and-style.html" class="nav-link" target="_blank">English</a></li>
-    <li><a href="https://jp.vuejs.org/v2/guide/class-and-style.html" class="nav-link" target="_blank">日本語</a></li>
-    <li><a href="https://ru.vuejs.org/v2/guide/class-and-style.html" class="nav-link" target="_blank">Русский</a></li>
-    <li><a href="https://kr.vuejs.org/v2/guide/class-and-style.html" class="nav-link" target="_blank">한국어</a></li>
-    <li><a href="https://br.vuejs.org/v2/guide/class-and-style.html" class="nav-link" target="_blank">Português</a></li>
-    <li><a href="https://fr.vuejs.org/v2/guide/class-and-style.html" class="nav-link" target="_blank">Français</a></li>
+    <li><a href="https://vuejs.org/v2/guide/filters.html" class="nav-link" target="_blank">English</a></li>
+    <li><a href="https://jp.vuejs.org/v2/guide/filters.html" class="nav-link" target="_blank">日本語</a></li>
+    <li><a href="https://ru.vuejs.org/v2/guide/filters.html" class="nav-link" target="_blank">Русский</a></li>
+    <li><a href="https://kr.vuejs.org/v2/guide/filters.html" class="nav-link" target="_blank">한국어</a></li>
+    <li><a href="https://br.vuejs.org/v2/guide/filters.html" class="nav-link" target="_blank">Português</a></li>
+    <li><a href="https://fr.vuejs.org/v2/guide/filters.html" class="nav-link" target="_blank">Français</a></li>
   </ul>
 </li>
 
@@ -309,7 +309,7 @@
         
         
         <li>
-            <a href="/v2/guide/class-and-style.html" class="sidebar-link current">Class 与 Style 绑定</a>
+            <a href="/v2/guide/class-and-style.html" class="sidebar-link">Class 与 Style 绑定</a>
         </li>
     
         
@@ -493,7 +493,7 @@
         
         
         <li>
-            <a href="/v2/guide/filters.html" class="sidebar-link">过滤器</a>
+            <a href="/v2/guide/filters.html" class="sidebar-link current">过滤器</a>
         </li>
     
         
@@ -707,92 +707,38 @@
 </div>
 
 
-<div class="content guide with-sidebar class-and-style-guide">
+<div class="content guide with-sidebar filters-guide">
     
       
         
       
     
     
-      <h1>Class 与 Style 绑定</h1>
+      <h1>过滤器</h1>
     
     
-    <p>数据绑定一个常见需求是操作元素的 class 列表和它的内联样式。因为它们都是属性 ，我们可以用<code>v-bind</code> 处理它们：只需要计算出表达式最终的字符串。不过，字符串拼接麻烦又易错。因此，在 <code>v-bind</code> 用于 <code>class</code> 和 <code>style</code> 时， Vue.js 专门增强了它。表达式的结果类型除了字符串之外，还可以是对象或数组。</p>
-<h2 id="绑定-HTML-Class"><a href="#绑定-HTML-Class" class="headerlink" title="绑定 HTML Class"></a>绑定 HTML Class</h2><h3 id="对象语法"><a href="#对象语法" class="headerlink" title="对象语法"></a>对象语法</h3><p>我们可以传给 <code>v-bind:class</code> 一个对象，以动态地切换 class：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:class</span>=<span class="string">"&#123; active: isActive &#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>上面的语法表示 class<code>active</code> 的更新将取决于数据属性 <code>isActive</code> 是否为<a href="https://developer.mozilla.org/en-US/docs/Glossary/Truthy" target="_blank" rel="external">真值</a> 。</p>
-<p>你可以在对象中传入更多属性用来动态切换多个 class。此外， <code>v-bind:class</code> 指令也可以与普通的 class 属性共存。如下模板：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"static"</span></span></div><div class="line">     <span class="attr">v-bind:class</span>=<span class="string">"&#123; active: isActive, 'text-danger': hasError &#125;"</span>&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>如下 data ：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">data: &#123;</div><div class="line">  <span class="attr">isActive</span>: <span class="literal">true</span>,</div><div class="line">  <span class="attr">hasError</span>: <span class="literal">false</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>渲染为：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"static active"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>当 <code>isActive</code> 或者 <code>hasError</code> 变化时，class 列表将相应地更新。例如，如果 <code>hasError</code> 的值为 <code>true</code> ， class列表将变为 <code>&quot;static active text-danger&quot;</code> 。</p>
-<p>你也可以直接绑定数据里的一个对象：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:class</span>=<span class="string">"classObject"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">data: &#123;</div><div class="line">  <span class="attr">classObject</span>: &#123;</div><div class="line">    <span class="attr">active</span>: <span class="literal">true</span>,</div><div class="line">    <span class="string">'text-danger'</span>: <span class="literal">false</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>渲染的结果和上面一样。我们也可以在这里绑定返回对象的<a href="computed.html">计算属性</a>。这是一个常用且强大的模式：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:class</span>=<span class="string">"classObject"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">data: &#123;</div><div class="line">  <span class="attr">isActive</span>: <span class="literal">true</span>,</div><div class="line">  <span class="attr">error</span>: <span class="literal">null</span></div><div class="line">&#125;,</div><div class="line"><span class="attr">computed</span>: &#123;</div><div class="line">  <span class="attr">classObject</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      <span class="attr">active</span>: <span class="keyword">this</span>.isActive &amp;&amp; !<span class="keyword">this</span>.error,</div><div class="line">      <span class="string">'text-danger'</span>: <span class="keyword">this</span>.error &amp;&amp; <span class="keyword">this</span>.error.type === <span class="string">'fatal'</span>,</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="数组语法"><a href="#数组语法" class="headerlink" title="数组语法"></a>数组语法</h3><p>我们可以把一个数组传给  <code>v-bind:class</code>，以应用一个 class 列表：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:class</span>=<span class="string">"[activeClass, errorClass]"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">data: &#123;</div><div class="line">  <span class="attr">activeClass</span>: <span class="string">'active'</span>,</div><div class="line">  <span class="attr">errorClass</span>: <span class="string">'text-danger'</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>渲染为：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"active text-danger"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>如果你也想根据条件切换列表中的 class，可以用三元表达式：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:class</span>=<span class="string">"[isActive ? activeClass : '', errorClass]"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>此例始终添加 <code>errorClass</code> ，但是只有在 <code>isActive</code> 是 <code>true</code> 时添加 <code>activeClass</code>。</p>
-<p>不过，当有多个条件 class 时这样写有些繁琐。可以在数组语法中使用对象语法：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:class</span>=<span class="string">"[&#123; active: isActive &#125;, errorClass]"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="用在组件上"><a href="#用在组件上" class="headerlink" title="用在组件上"></a>用在组件上</h3><blockquote>
-<p>这个章节假设你已经对 <a href="components.html">Vue 组件</a>有一定的了解。当然你也可以跳过这里，稍后再回过头来看。</p>
-</blockquote>
-<p>当你在一个自定义组件上用到 <code>class</code> 属性的时候，这些类将被添加到根元素上面，这个元素上已经存在的类不会被覆盖。</p>
-<p>例如，如果你声明了这个组件：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.component(<span class="string">'my-component'</span>, &#123;</div><div class="line">  <span class="attr">template</span>: <span class="string">'&lt;p class="foo bar"&gt;Hi&lt;/p&gt;'</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<p>然后在使用它的时候添加一些 class：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">my-component</span> <span class="attr">class</span>=<span class="string">"baz boo"</span>&gt;</span><span class="tag">&lt;/<span class="name">my-component</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>HTML 最终将被渲染成为：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"foo bar baz boo"</span>&gt;</span>Hi<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>同样的适用于绑定 HTML class:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">my-component</span> <span class="attr">v-bind:class</span>=<span class="string">"&#123; active: isActive &#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">my-component</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>当 <code>isActive</code> 为 truthy 的时候，HTML 将被渲染成为：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"foo bar active"</span>&gt;</span>Hi<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="绑定内联样式"><a href="#绑定内联样式" class="headerlink" title="绑定内联样式"></a>绑定内联样式</h2><h3 id="对象语法-1"><a href="#对象语法-1" class="headerlink" title="对象语法"></a>对象语法</h3><p><code>v-bind:style</code> 的对象语法十分直观——看着非常像 CSS，其实它是一个 JavaScript 对象。 CSS 属性名可以用驼峰式 (camelCase) 或 (配合引号的) 短横分隔命名 (kebab-case)：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:style</span>=<span class="string">"&#123; color: activeColor, fontSize: fontSize + 'px' &#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">data: &#123;</div><div class="line">  <span class="attr">activeColor</span>: <span class="string">'red'</span>,</div><div class="line">  <span class="attr">fontSize</span>: <span class="number">30</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>直接绑定到一个样式对象通常更好，让模板更清晰：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:style</span>=<span class="string">"styleObject"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">data: &#123;</div><div class="line">  <span class="attr">styleObject</span>: &#123;</div><div class="line">    <span class="attr">color</span>: <span class="string">'red'</span>,</div><div class="line">    <span class="attr">fontSize</span>: <span class="string">'13px'</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>同样的，对象语法常常结合返回对象的计算属性使用。</p>
-<h3 id="数组语法-1"><a href="#数组语法-1" class="headerlink" title="数组语法"></a>数组语法</h3><p><code>v-bind:style</code> 的数组语法可以将多个样式对象应用到一个元素上：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:style</span>=<span class="string">"[baseStyles, overridingStyles]"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="自动添加前缀"><a href="#自动添加前缀" class="headerlink" title="自动添加前缀"></a>自动添加前缀</h3><p>当 <code>v-bind:style</code> 使用需要<a href="https://developer.mozilla.org/en-US/docs/Glossary/Vendor_Prefix" target="_blank" rel="external">特定前缀</a>的 CSS 属性时，如 <code>transform</code>，Vue.js 会自动侦测并添加相应的前缀。</p>
-<h3 id="多重值"><a href="#多重值" class="headerlink" title="多重值"></a>多重值</h3><blockquote>
-<p>2.3.0+</p>
-</blockquote>
-<p>从 2.3.0 起你可以为 <code>style</code> 绑定中的属性提供一个包含多个值的数组，常用于提供多个带前缀的值，例如：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">:style</span>=<span class="string">"&#123; display: ['-webkit-box', '-ms-flexbox', 'flex'] &#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>这会渲染数组中最后一个被浏览器支持的值。在这个例子中，如果浏览器支持不带浏览器前缀的 flexbox，那么渲染结果会是 <code>display: flex</code>。</p>
-<hr>
-<blockquote>
-<p>原文：<a href="http://vuejs.org/guide/class-and-style.html" target="_blank" rel="external">http://vuejs.org/guide/class-and-style.html</a></p>
-</blockquote>
-<hr>
+    <p>Vue.js 允许你自定义过滤器，可被用作一些常见的文本格式化。过滤器可以用在两个地方：<strong>mustache 插值和 <code>v-bind</code> 表达式</strong> (后者从 2.1.0+ 开始支持)。过滤器应该被添加在 JavaScript 表达式的尾部，由“管道”符指示：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- in mustaches --&gt;</span></div><div class="line">&#123;&#123; message | capitalize &#125;&#125;</div><div class="line"></div><div class="line"><span class="comment">&lt;!-- in v-bind --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:id</span>=<span class="string">"rawId | formatId"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>过滤器函数总接收表达式的值 (之前的操作链的结果) 作为第一个参数。在这个例子中，<code>capitalize</code> 过滤器函数将会收到 <code>message</code> 的值作为第一个参数。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">  filters: &#123;</div><div class="line">    <span class="attr">capitalize</span>: <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</div><div class="line">      <span class="keyword">if</span> (!value) <span class="keyword">return</span> <span class="string">''</span></div><div class="line">      value = value.toString()</div><div class="line">      <span class="keyword">return</span> value.charAt(<span class="number">0</span>).toUpperCase() + value.slice(<span class="number">1</span>)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>过滤器可以串联：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line">&#123;&#123; message | filterA | filterB &#125;&#125;</div></pre></td></tr></table></figure>
+<p>在这个例子中，<code>filterA</code> 被定义为接收单个参数的过滤器函数，表达式 <code>message</code> 的值将作为参数传入到函数中，然后继续调用同样被定义为接收单个参数的过滤器函数 <code>filterB</code>，将 <code>filterA</code> 的结果传递到 <code>filterB</code> 中。</p>
+<p>过滤器是 JavaScript 函数，因此可以接收参数：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line">&#123;&#123; message | filterA('arg1', arg2) &#125;&#125;</div></pre></td></tr></table></figure>
+<p>这里，<code>filterA</code> 被定义为接收三个参数的过滤器函数。其中 <code>message</code> 的值作为第一个参数，普通字符串 <code>&#39;arg1&#39;</code> 作为第二个参数，表达式 <code>arg2</code> 取值后的值作为第三个参数。</p>
 
     
       <div class="guide-links">
         
-          <span>← <a href="/v2/guide/computed.html">计算属性和观察者</a></span>
+          <span>← <a href="/v2/guide/plugins.html">插件</a></span>
         
-        
-          <span style="float:right"><a href="/v2/guide/conditional.html">条件渲染</a> →</span>
         
       </div>
     
     <div class="footer">
       发现错误？想参与编辑？
-      <a href="https://github.com/vuejs/cn.vuejs.org/blob/master/src/v2/guide/class-and-style.md" target="_blank">
+      <a href="https://github.com/vuejs/cn.vuejs.org/blob/master/src/v2/guide/filters.md" target="_blank">
         在 Github 上编辑此页！
       </a>
     </div>
