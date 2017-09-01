@@ -374,8 +374,6 @@
 <p>2.1.0 起新增：如果没有提供回调且支持 promise 的环境中返回 promise。</p>
 </blockquote>
 </li>
-<li><p><strong>参考</strong>：<a href="../guide/reactivity.html#异步更新队列">异步更新队列</a></p>
-</li>
 </ul>
 <h3 id="Vue-set-target-key-value"><a href="#Vue-set-target-key-value" class="headerlink" title="Vue.set( target, key, value )"></a>Vue.set( target, key, value )</h3><ul>
 <li><p><strong>参数</strong>：</p>
@@ -389,9 +387,8 @@
 </li>
 <li><p><strong>用法</strong>：</p>
 <p>设置对象的属性。如果对象是响应式的，确保属性被创建后也是响应式的，同时触发视图更新。这个方法主要用于避开 Vue 不能检测属性被添加的限制。</p>
-<p><strong>注意对象不能是 Vue 实例，或者 Vue 实例的根数据对象</strong></p>
-</li>
-<li><p><strong>参考</strong>：<a href="../guide/reactivity.html">深入响应式原理</a></p>
+<p class="tip">注意对象不能是 Vue 实例，或者 Vue 实例的根数据对象。</p>
+
 </li>
 </ul>
 <h3 id="Vue-delete-target-key"><a href="#Vue-delete-target-key" class="headerlink" title="Vue.delete( target, key )"></a>Vue.delete( target, key )</h3><ul>
@@ -410,8 +407,7 @@
 <p>在 2.2.0+ 中同样支持在数组上工作。</p>
 </blockquote>
 <p class="tip">目标对象不能是一个 Vue 示例或 Vue 示例的根数据对象。</p>
-</li>
-<li><p><strong>参考</strong>：<a href="../guide/reactivity.html">深入响应式原理</a></p>
+
 </li>
 </ul>
 <h3 id="Vue-directive-id-definition"><a href="#Vue-directive-id-definition" class="headerlink" title="Vue.directive( id, [definition] )"></a>Vue.directive( id, [definition] )</h3><ul>
@@ -515,8 +511,7 @@
 <li><p><strong>示例</strong>：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> data = &#123; <span class="attr">a</span>: <span class="number">1</span> &#125;</div><div class="line"></div><div class="line"><span class="comment">// 直接创建一个实例</span></div><div class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">data</span>: data</div><div class="line">&#125;)</div><div class="line">vm.a <span class="comment">// =&gt; 1</span></div><div class="line">vm.$data === data <span class="comment">// =&gt; true</span></div><div class="line"></div><div class="line"><span class="comment">// Vue.extend() 中 data 必须是函数</span></div><div class="line"><span class="keyword">var</span> Component = Vue.extend(&#123;</div><div class="line">  <span class="attr">data</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> &#123; <span class="attr">a</span>: <span class="number">1</span> &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p class="tip">注意，<strong>不应该对 <code>data</code> 属性使用箭头函数</strong> (例如<code>data: () =&gt; { return { a: this.myProp }}</code>)。理由是箭头函数绑定了父级作用域的上下文，所以 this 将不会按照期望指向 Vue 实例，<code>this.myProp</code> 将是 undefined。</p>
-</li>
-<li><p><strong>参考</strong>：<a href="../guide/reactivity.html">深入响应式原理</a></p>
+
 </li>
 </ul>
 <h3 id="props"><a href="#props" class="headerlink" title="props"></a>props</h3><ul>
@@ -1241,11 +1236,7 @@
 <li><p><strong>示例</strong>：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">  methods: &#123;</div><div class="line">    <span class="comment">// ...</span></div><div class="line">    example: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="comment">// 修改数据</span></div><div class="line">      <span class="keyword">this</span>.message = <span class="string">'changed'</span></div><div class="line">      <span class="comment">// DOM 还没有更新</span></div><div class="line">      <span class="keyword">this</span>.$nextTick(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="comment">// DOM 现在更新了</span></div><div class="line">        <span class="comment">// `this` 绑定到当前实例</span></div><div class="line">        <span class="keyword">this</span>.doSomethingElse()</div><div class="line">      &#125;)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 </li>
-<li><p><strong>参考</strong>：</p>
-<ul>
-<li><a href="#Vue-nextTick">Vue.nextTick</a></li>
-<li><a href="../guide/reactivity.html#异步更新队列">异步更新队列</a></li>
-</ul>
+<li><p><strong>参考</strong>：<a href="#Vue-nextTick">Vue.nextTick</a></p>
 </li>
 </ul>
 <h3 id="vm-destroy"><a href="#vm-destroy" class="headerlink" title="vm.$destroy()"></a>vm.$destroy()</h3><ul>
