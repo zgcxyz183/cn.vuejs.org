@@ -784,9 +784,9 @@
 <h2 id="提取-CSS"><a href="#提取-CSS" class="headerlink" title="提取 CSS"></a>提取 CSS</h2><p>当使用单文件组件时，组件内的 CSS 会以 <code>&lt;style&gt;</code> 标签的方式通过 JavaScript 动态注入。这有一些小小的运行时开销，如果你使用服务端渲染，这会导致一段“无样式的内容瞬间 (fouc)”。横跨所有组件提取 CSS 到同一个文件回避这件事情，这也会更好的压缩和缓存 CSS。</p>
 <p>可查阅相关构建工具文档：</p>
 <ul>
-<li><a href="http://vue-loader.vuejs.org/en/configurations/extract-css.html" target="_blank" rel="external">Webpack + vue-loader</a> (the <code>vue-cli</code> webpack template has this pre-configured)</li>
+<li><a href="https://vue-loader.vuejs.org/en/configurations/extract-css.html" target="_blank" rel="external">Webpack + vue-loader</a> (the <code>vue-cli</code> webpack template has this pre-configured</li>
 <li><a href="https://github.com/vuejs/vueify#css-extraction" target="_blank" rel="external">Browserify + vueify</a></li>
-<li><a href="https://github.com/znck/rollup-plugin-vue#options" target="_blank" rel="external">Rollup + rollup-plugin-vue</a></li>
+<li><a href="https://vuejs.github.io/rollup-plugin-vue/#/en/2.3/?id=custom-handler" target="_blank" rel="external">Rollup + rollup-plugin-vue</a></li>
 </ul>
 <h2 id="跟踪运行时错误"><a href="#跟踪运行时错误" class="headerlink" title="跟踪运行时错误"></a>跟踪运行时错误</h2><p>如果在组件渲染时出现运行错误，错误将会被传递至全局 <code>Vue.config.errorHandler</code> 配置函数（如果已设置）。利用这个钩子函数和错误跟踪服务（如 <a href="https://sentry.io" target="_blank" rel="external">Sentry</a>，它为 Vue 提供<a href="https://sentry.io/for/vue/" target="_blank" rel="external">官方集成</a>），可能是个不错的主意。</p>
 
