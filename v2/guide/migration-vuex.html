@@ -479,7 +479,7 @@
         
         
         <li>
-            <a href="/v2/guide/render-function.html" class="sidebar-link">Render 函数 & JSX</a>
+            <a href="/v2/guide/render-function.html" class="sidebar-link">渲染函数 & JSX</a>
         </li>
     
         
@@ -788,7 +788,7 @@
   <p>在代码库运行<a href="https://github.com/vuejs/vue-migration-helper" target="_blank" rel="external">迁移工具</a>，查找在 <code>store.watch</code> 中使用字符串作为第一个参数的事例。</p>
 </div>
 
-<h2 id="Store-的事件触发器-移除"><a href="#Store-的事件触发器-移除" class="headerlink" title="Store 的事件触发器 移除"></a>Store 的事件触发器 <sup>移除</sup></h2><p>store 实例不再暴露事件触发器(event emitter)接口(<code>on</code>, <code>off</code>, <code>emit</code>)。如果你之前使用 store 作为全局的 event bus，迁移说明相关内容请查阅<a href="migration.html#dispatch-and-broadcast-removed">此章节</a>。</p>
+<h2 id="Store-的事件触发器-移除"><a href="#Store-的事件触发器-移除" class="headerlink" title="Store 的事件触发器 移除"></a>Store 的事件触发器 <sup>移除</sup></h2><p>store 实例不再暴露事件触发器(event emitter)接口(<code>on</code>, <code>off</code>, <code>emit</code>)。如果你之前使用 store 作为全局的 event bus，迁移说明相关内容请查阅<a href="migration.html#dispatch-和-broadcast-替换">此章节</a>。</p>
 <p>为了替换正在使用观察 store 自身触发事件的这些接口，（例如：<code>store.on(&#39;mutation&#39;, callback)</code>），我们引入新的方法 <code>store.subscribe</code>。在插件中的典型使用方式如下：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> myPlugin = <span class="function"><span class="params">store</span> =&gt;</span> &#123;</div><div class="line">  store.subscribe(<span class="function"><span class="keyword">function</span> (<span class="params">mutation, state</span>) </span>&#123;</div><div class="line">    <span class="comment">// Do something...</span></div><div class="line">  &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>更多信息请查阅<a href="https://github.com/vuejs/vuex/blob/1.0/docs/en/plugins.md" target="_blank" rel="external">插件文档</a>的示例。</p>

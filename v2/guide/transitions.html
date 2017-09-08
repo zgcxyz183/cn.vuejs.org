@@ -479,7 +479,7 @@
         
         
         <li>
-            <a href="/v2/guide/render-function.html" class="sidebar-link">Render 函数 & JSX</a>
+            <a href="/v2/guide/render-function.html" class="sidebar-link">渲染函数 & JSX</a>
         </li>
     
         
@@ -1033,7 +1033,7 @@ new Vue({
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">transition</span></span></div><div class="line">  <span class="attr">appear</span></div><div class="line">  <span class="attr">appear-class</span>=<span class="string">"custom-appear-class"</span></div><div class="line">  <span class="attr">appear-to-class</span>=<span class="string">"custom-appear-to-class"</span> (<span class="attr">2.1.8</span>+)</div><div class="line">  <span class="attr">appear-active-class</span>=<span class="string">"custom-appear-active-class"</span></div><div class="line">&gt;</div><div class="line">  <span class="comment">&lt;!-- ... --&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">transition</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>自定义 JavaScript 钩子：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">transition</span></span></div><div class="line">  <span class="attr">appear</span></div><div class="line">  <span class="attr">v-on:before-appear</span>=<span class="string">"customBeforeAppearHook"</span></div><div class="line">  <span class="attr">v-on:appear</span>=<span class="string">"customAppearHook"</span></div><div class="line">  <span class="attr">v-on:after-appear</span>=<span class="string">"customAfterAppearHook"</span></div><div class="line">  <span class="attr">v-on:appear-cancelled</span>=<span class="string">"customAppearCancelledHook"</span></div><div class="line">&gt;</div><div class="line">  <span class="comment">&lt;!-- ... --&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">transition</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="多个元素的过渡"><a href="#多个元素的过渡" class="headerlink" title="多个元素的过渡"></a>多个元素的过渡</h2><p>我们之后讨论 <a href="#多个组件的过渡">多个组件的过渡</a>, 对于原生标签可以使用 <code>v-if</code>/<code>v-else</code> 。最常见的多标签过渡是一个列表和描述这个列表为空消息的元素：</p>
+<h2 id="多个元素的过渡"><a href="#多个元素的过渡" class="headerlink" title="多个元素的过渡"></a>多个元素的过渡</h2><p>我们之后讨论<a href="#多个组件的过渡">多个组件的过渡</a>, 对于原生标签可以使用 <code>v-if</code>/<code>v-else</code> 。最常见的多标签过渡是一个列表和描述这个列表为空消息的元素：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">transition</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">table</span> <span class="attr">v-if</span>=<span class="string">"items.length &gt; 0"</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- ... --&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">table</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-else</span>&gt;</span>Sorry, no items found.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">transition</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>可以这样使用，但是有一点需要注意：</p>
 <p class="tip">当有<strong>相同标签名</strong>的元素切换时，需要通过 <code>key</code> 特性设置唯一的值来标记以让 Vue 区分它们，否则 Vue 为了效率只会替换相同标签内部的内容。即使在技术上没有必要，<strong>给在 <code>&lt;transition&gt;</code> 组件中的多个元素设置 key  是一个更好的实践。</strong></p>

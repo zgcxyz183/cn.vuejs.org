@@ -479,7 +479,7 @@
         
         
         <li>
-            <a href="/v2/guide/render-function.html" class="sidebar-link">Render 函数 & JSX</a>
+            <a href="/v2/guide/render-function.html" class="sidebar-link">渲染函数 & JSX</a>
         </li>
     
         
@@ -768,7 +768,7 @@
     
     <h2 id="用-v-for-把一个数组对应为一组元素"><a href="#用-v-for-把一个数组对应为一组元素" class="headerlink" title="用 v-for 把一个数组对应为一组元素"></a>用 <code>v-for</code> 把一个数组对应为一组元素</h2><p>我们用 <code>v-for</code> 指令根据一组数组的选项列表进行渲染。 <code>v-for</code> 指令需要以 <code>item in items</code> 形式的特殊语法， <code>items</code> 是源数据数组并且 <code>item</code> 是数组元素迭代的别名。</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"example-1"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">"item in items"</span>&gt;</span></div><div class="line">    &#123;&#123; item.message &#125;&#125;</div><div class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> example1 = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">el</span>: <span class="string">'#example-1'</span>,</div><div class="line">  <span class="attr">data</span>: &#123;</div><div class="line">    <span class="attr">items</span>: [</div><div class="line">      &#123;<span class="attr">message</span>: <span class="string">'Foo'</span> &#125;,</div><div class="line">      &#123;<span class="attr">message</span>: <span class="string">'Bar'</span> &#125;</div><div class="line">    ]</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> example1 = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">el</span>: <span class="string">'#example-1'</span>,</div><div class="line">  <span class="attr">data</span>: &#123;</div><div class="line">    <span class="attr">items</span>: [</div><div class="line">      &#123; <span class="attr">message</span>: <span class="string">'Foo'</span> &#125;,</div><div class="line">      &#123; <span class="attr">message</span>: <span class="string">'Bar'</span> &#125;</div><div class="line">    ]</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>结果：</p>
 
 <ul id="example-1" class="demo">
@@ -955,7 +955,7 @@ new Vue({
 <h2 id="v-for-with-v-if"><a href="#v-for-with-v-if" class="headerlink" title="v-for with v-if"></a><code>v-for</code> with <code>v-if</code></h2><p>当它们处于同一节点，<code>v-for</code> 的优先级比 <code>v-if</code> 更高，这意味着 <code>v-if</code> 将分别重复运行于每个 <code>v-for</code> 循环中。当你想为仅有的<em>一些</em>项渲染节点时，这种优先级的机制会十分有用，如下：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">"todo in todos"</span> <span class="attr">v-if</span>=<span class="string">"!todo.isComplete"</span>&gt;</span></div><div class="line">  &#123;&#123; todo &#125;&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>上面的代码只传递了未 complete 的 todos。</p>
-<p>而如果你的目的是有条件地跳过循环的执行，那么可以将 <code>v-if</code> 置于外层元素 (或 <a href="conditional.html#Conditional-Groups-with-v-if-on-lt-template-gt"><code>&lt;template&gt;</code></a>)上。如:</p>
+<p>而如果你的目的是有条件地跳过循环的执行，那么可以将 <code>v-if</code> 置于外层元素 (或 <a href="conditional.html#在-lt-template-gt-中配合-v-if-条件渲染一整组"><code>&lt;template&gt;</code></a>)上。如:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">v-if</span>=<span class="string">"todos.length"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">"todo in todos"</span>&gt;</span></div><div class="line">    &#123;&#123; todo &#125;&#125;</div><div class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">v-else</span>&gt;</span>No todos left!<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
 <h2 id="一个组件的-v-for"><a href="#一个组件的-v-for" class="headerlink" title="一个组件的 v-for"></a>一个组件的 <code>v-for</code></h2><blockquote>
 <p>了解组件相关知识，查看 <a href="components.html">组件</a> 。完全可以先跳过它，以后再回来查看。</p>

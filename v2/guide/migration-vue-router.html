@@ -479,7 +479,7 @@
         
         
         <li>
-            <a href="/v2/guide/render-function.html" class="sidebar-link">Render 函数 & JSX</a>
+            <a href="/v2/guide/render-function.html" class="sidebar-link">渲染函数 & JSX</a>
         </li>
     
         
@@ -781,7 +781,7 @@
   <p>运行 <a href="https://github.com/vuejs/vue-migration-helper" target="_blank" rel="external">迁移助手</a> 找到 <code>router.start</code> 被调用的示例。</p>
 </div>
 
-<h2 id="Route-定义"><a href="#Route-定义" class="headerlink" title="Route 定义"></a>Route 定义</h2><h3 id="router-map-替换"><a href="#router-map-替换" class="headerlink" title="router.map 替换"></a><code>router.map</code> <sup>替换</sup></h3><p>路由现在被定义为一个在 router 实例里的一个<a href="http://router.vuejs.org/en/essentials/getting-started.html#javascript" target="_blank" rel="external"><code>routes</code> 选项</a>数组。所以这些路由：</p>
+<h2 id="Route-定义"><a href="#Route-定义" class="headerlink" title="Route 定义"></a>Route 定义</h2><h3 id="router-map-替换"><a href="#router-map-替换" class="headerlink" title="router.map 替换"></a><code>router.map</code> <sup>替换</sup></h3><p>路由现在被定义为一个在 router 实例里的一个<a href="https://router.vuejs.org/zh-cn/essentials/getting-started.html#javascript" target="_blank" rel="external"><code>routes</code> 选项</a>数组。所以这些路由：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">router.map(&#123;</div><div class="line">  <span class="string">'/foo'</span>: &#123;</div><div class="line">    <span class="attr">component</span>: Foo</div><div class="line">  &#125;,</div><div class="line">  <span class="string">'/bar'</span>: &#123;</div><div class="line">    <span class="attr">component</span>: Bar</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>会以这种方式定义：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> router = <span class="keyword">new</span> VueRouter(&#123;</div><div class="line">  <span class="attr">routes</span>: [</div><div class="line">    &#123; <span class="attr">path</span>: <span class="string">'/foo'</span>, <span class="attr">component</span>: Foo &#125;,</div><div class="line">    &#123; <span class="attr">path</span>: <span class="string">'/bar'</span>, <span class="attr">component</span>: Bar &#125;</div><div class="line">  ]</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
@@ -878,7 +878,7 @@
   <p>运行 <a href="https://github.com/vuejs/vue-migration-helper" target="_blank" rel="external">迁移助手</a> 找到 <code>v-link-active</code> 指令的示例</p>
 </div>
 
-<h2 id="编程导航"><a href="#编程导航" class="headerlink" title="编程导航"></a>编程导航</h2><h3 id="router-go-改变"><a href="#router-go-改变" class="headerlink" title="router.go 改变"></a><code>router.go</code> <sup>改变</sup></h3><p>为了与 <a href="https://developer.mozilla.org/en-US/docs/Web/API/History_API" target="_blank" rel="external">HTML5 History API</a> 保持一致性，<code>router.go</code> 已经被用来作为 <a href="https://router.vuejs.org/en/essentials/navigation.html#routergon" target="_blank" rel="external">后退/前进导航</a>，<a href="http://router.vuejs.org/en/essentials/navigation.html#routerpushlocation" target="_blank" rel="external"><code>router.push</code> </a> 用来导向特殊页面。</p>
+<h2 id="编程导航"><a href="#编程导航" class="headerlink" title="编程导航"></a>编程导航</h2><h3 id="router-go-改变"><a href="#router-go-改变" class="headerlink" title="router.go 改变"></a><code>router.go</code> <sup>改变</sup></h3><p>为了与 <a href="https://developer.mozilla.org/en-US/docs/Web/API/History_API" target="_blank" rel="external">HTML5 History API</a> 保持一致性，<code>router.go</code> 已经被用来作为 <a href="https://router.vuejs.org/zh-cn/essentials/navigation.html#routergon" target="_blank" rel="external">后退/前进导航</a>，<a href="https://router.vuejs.org/zh-cn/essentials/navigation.html#routerpushlocation" target="_blank" rel="external"><code>router.push</code> </a> 用来导向特殊页面。</p>
 
 <div class="upgrade-path">
   <h4>升级路径</h4>
@@ -892,7 +892,7 @@
   <p>运行 <a href="https://github.com/vuejs/vue-migration-helper" target="_blank" rel="external">迁移助手</a> 找到 <code>hashbang: false</code> 选项的示。</p>
 </div>
 
-<h3 id="history-true-替换"><a href="#history-true-替换" class="headerlink" title="history: true 替换"></a><code>history: true</code> <sup>替换</sup></h3><p>所有路由模型选项将被简化成一个单个的<a href="http://router.vuejs.org/en/api/options.html#mode" target="_blank" rel="external"><code>mode</code> 选项</a>。 你需要更新：</p>
+<h3 id="history-true-替换"><a href="#history-true-替换" class="headerlink" title="history: true 替换"></a><code>history: true</code> <sup>替换</sup></h3><p>所有路由模型选项将被简化成一个单个的<a href="https://router.vuejs.org/zh-cn/api/options.html#mode" target="_blank" rel="external"><code>mode</code> 选项</a>。 你需要更新：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> router = <span class="keyword">new</span> VueRouter(&#123;</div><div class="line">  <span class="attr">history</span>: <span class="string">'true'</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>成这个写法：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> router = <span class="keyword">new</span> VueRouter(&#123;</div><div class="line">  <span class="attr">mode</span>: <span class="string">'history'</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
@@ -902,7 +902,7 @@
   <p>运行 <a href="https://github.com/vuejs/vue-migration-helper" target="_blank" rel="external">迁移助手</a> 找到 <code>history: true</code> 选项的示。</p>
 </div>
 
-<h3 id="abstract-true-替换"><a href="#abstract-true-替换" class="headerlink" title="abstract: true 替换"></a><code>abstract: true</code> <sup>替换</sup></h3><p>所有路由模型选项将被简化成一个单个的<a href="http://router.vuejs.org/en/api/options.html#mode" target="_blank" rel="external"><code>mode</code> 选项</a>。 你需要更新：</p>
+<h3 id="abstract-true-替换"><a href="#abstract-true-替换" class="headerlink" title="abstract: true 替换"></a><code>abstract: true</code> <sup>替换</sup></h3><p>所有路由模型选项将被简化成一个单个的<a href="https://router.vuejs.org/zh-cn/api/options.html#mode" target="_blank" rel="external"><code>mode</code> 选项</a>。 你需要更新：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> router = <span class="keyword">new</span> VueRouter(&#123;</div><div class="line">  <span class="attr">abstract</span>: <span class="string">'true'</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>成这个写法：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> router = <span class="keyword">new</span> VueRouter(&#123;</div><div class="line">  <span class="attr">mode</span>: <span class="string">'abstract'</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
@@ -929,7 +929,7 @@
   <p>运行 <a href="https://github.com/vuejs/vue-migration-helper" target="_blank" rel="external">迁移路径</a> 找到 <code>root</code> 选项的示例。</p>
 </div>
 
-<h3 id="transitionOnLoad-移除"><a href="#transitionOnLoad-移除" class="headerlink" title="transitionOnLoad 移除"></a><code>transitionOnLoad</code> <sup>移除</sup></h3><p>由于 Vue 的过渡系统<a href="transitions.html#Transitions-on-Initial-Render"><code>appear</code> transition control</a>的存在，这个选项将不再需要。</p>
+<h3 id="transitionOnLoad-移除"><a href="#transitionOnLoad-移除" class="headerlink" title="transitionOnLoad 移除"></a><code>transitionOnLoad</code> <sup>移除</sup></h3><p>由于 Vue 的过渡系统<a href="transitions.html#初始渲染的过渡"><code>appear</code> transition control</a>的存在，这个选项将不再需要。</p>
 
 <div class="upgrade-path">
   <h4>升级路径</h4>
@@ -943,14 +943,14 @@
   <p>运行 <a href="https://github.com/vuejs/vue-migration-helper" target="_blank" rel="external">迁移指令</a> 找到 <code>suppressTransitionError: true</code> 选项的示例。</p>
 </div>
 
-<h2 id="路由挂钩"><a href="#路由挂钩" class="headerlink" title="路由挂钩"></a>路由挂钩</h2><h3 id="activate-替换"><a href="#activate-替换" class="headerlink" title="activate 替换"></a><code>activate</code> <sup>替换</sup></h3><p>使用<a href="http://router.vuejs.org/en/advanced/navigation-guards.html#incomponent-guards" target="_blank" rel="external"><code>beforeRouteEnter</code></a>这一组件进行替代。</p>
+<h2 id="路由挂钩"><a href="#路由挂钩" class="headerlink" title="路由挂钩"></a>路由挂钩</h2><h3 id="activate-替换"><a href="#activate-替换" class="headerlink" title="activate 替换"></a><code>activate</code> <sup>替换</sup></h3><p>使用<a href="https://router.vuejs.org/zh-cn/advanced/navigation-guards.html#组件内的钩子" target="_blank" rel="external"><code>beforeRouteEnter</code></a>这一组件进行替代。</p>
 
 <div class="upgrade-path">
   <h4>升级路径</h4>
   <p>运行 <a href="https://github.com/vuejs/vue-migration-helper" target="_blank" rel="external">迁移路径</a> 找到 <code>beforeRouteEnter</code> 钩子的示例。</p>
 </div>
 
-<h3 id="canActivate-替换"><a href="#canActivate-替换" class="headerlink" title="canActivate 替换"></a><code>canActivate</code> <sup>替换</sup></h3><p>使用<a href="http://router.vuejs.org/en/advanced/navigation-guards.html#perroute-guard" target="_blank" rel="external"><code>beforeEnter</code></a> 在路由中作为替代。</p>
+<h3 id="canActivate-替换"><a href="#canActivate-替换" class="headerlink" title="canActivate 替换"></a><code>canActivate</code> <sup>替换</sup></h3><p>使用<a href="http://router.vuejs.org/en/advanced/navigation-guards.html#perroute-guard" target="_blank" rel="external"><code>beforeEnter</code></a> 在路由中作为替代。<!-- todo translation --></p>
 
 <div class="upgrade-path">
   <h4>升级路径</h4>
@@ -964,7 +964,7 @@
   <p>运行 <a href="https://github.com/vuejs/vue-migration-helper" target="_blank" rel="external">迁移路径</a> 找到 <code>deactivate</code> 钩子的示例。</p>
 </div>
 
-<h3 id="canDeactivate-替换"><a href="#canDeactivate-替换" class="headerlink" title="canDeactivate 替换"></a><code>canDeactivate</code> <sup>替换</sup></h3><p>在组件中使用<a href="http://router.vuejs.org/en/advanced/navigation-guards.html#incomponent-guards" target="_blank" rel="external"><code>beforeRouteLeave</code></a> 作为替代。</p>
+<h3 id="canDeactivate-替换"><a href="#canDeactivate-替换" class="headerlink" title="canDeactivate 替换"></a><code>canDeactivate</code> <sup>替换</sup></h3><p>在组件中使用<a href="https://router.vuejs.org/zh-cn/advanced/navigation-guards.html#组件内的钩子" target="_blank" rel="external"><code>beforeRouteLeave</code></a> 作为替代。</p>
 
 <div class="upgrade-path">
   <h4>升级路径</h4>

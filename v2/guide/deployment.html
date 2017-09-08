@@ -479,7 +479,7 @@
         
         
         <li>
-            <a href="/v2/guide/render-function.html" class="sidebar-link">Render 函数 & JSX</a>
+            <a href="/v2/guide/render-function.html" class="sidebar-link">渲染函数 & JSX</a>
         </li>
     
         
@@ -767,7 +767,7 @@
     
     
     <h2 id="开启生产环境模式"><a href="#开启生产环境模式" class="headerlink" title="开启生产环境模式"></a>开启生产环境模式</h2><p>开发时，Vue 会提供很多警告来帮你解决常见的错误与陷阱。生产时，这些警告语句却没有用，反而会增加你的载荷量。再次，有些警告检查有小的运行时开销，生产环境模式下是可以避免的。</p>
-<h3 id="不用打包工具"><a href="#不用打包工具" class="headerlink" title="不用打包工具"></a>不用打包工具</h3><p>如果用 Vue 完整独立版本（直接用 <code>&lt;script&gt;</code> 元素引入 Vue），生产时应该用精简版本（<code>vue.min.js</code>)。请查看<a href="installation.html#独立版本">安装指导</a>，附有开发与精简版本。</p>
+<h3 id="不用打包工具"><a href="#不用打包工具" class="headerlink" title="不用打包工具"></a>不用打包工具</h3><p>如果用 Vue 完整独立版本（直接用 <code>&lt;script&gt;</code> 元素引入 Vue），生产时应该用精简版本（<code>vue.min.js</code>)。请查看<a href="installation.html#直接-lt-script-gt-引入">安装指导</a>，附有开发与精简版本。</p>
 <h3 id="用打包工具"><a href="#用打包工具" class="headerlink" title="用打包工具"></a>用打包工具</h3><p>如果用 Webpack 或 Browserify 类似的打包工具时，生产状态会在 Vue 源码中由 <code>process.env.NODE_ENV</code> 决定，默认在开发状态。Webpack 与 Browserify 两个打包工具都提供方法来覆盖此变量并使用生产状态，警告语句也会被精简掉。每一个 <code>vue-cli</code> 模板有预先配置好的打包工具，但了解怎样配置会更好。</p>
 <h4 id="Webpack"><a href="#Webpack" class="headerlink" title="Webpack"></a>Webpack</h4><p>使用 Webpack 的 <a href="http://webpack.github.io/docs/list-of-plugins.html#defineplugin" target="_blank" rel="external">DefinePlugin</a> 来指定生产环境，以便在压缩时可以让 UglifyJS 自动删除代码块内的警告语句。例如配置：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> webpack = <span class="built_in">require</span>(<span class="string">'webpack'</span>)</div><div class="line"></div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">  plugins: [</div><div class="line">    <span class="comment">// ...</span></div><div class="line">    <span class="keyword">new</span> webpack.DefinePlugin(&#123;</div><div class="line">      <span class="string">'process.env'</span>: &#123;</div><div class="line">        <span class="attr">NODE_ENV</span>: <span class="string">'"production"'</span></div><div class="line">      &#125;</div><div class="line">    &#125;),</div><div class="line">    <span class="keyword">new</span> webpack.optimize.UglifyJsPlugin(&#123;</div><div class="line">      <span class="attr">compress</span>: &#123;</div><div class="line">        <span class="attr">warnings</span>: <span class="literal">false</span></div><div class="line">      &#125;</div><div class="line">    &#125;)</div><div class="line">  ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>

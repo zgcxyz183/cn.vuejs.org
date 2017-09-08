@@ -479,7 +479,7 @@
         
         
         <li>
-            <a href="/v2/guide/render-function.html" class="sidebar-link">Render 函数 & JSX</a>
+            <a href="/v2/guide/render-function.html" class="sidebar-link">渲染函数 & JSX</a>
         </li>
     
         
@@ -850,7 +850,7 @@ new Vue({
 <p>2.1.4 新增</p>
 </blockquote>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 点击事件将只会触发一次 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">v-on:click.once</span>=<span class="string">"doThis"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>不像其它只能对原生的 DOM 事件起作用的修饰符，<code>.once</code> 修饰符还能被用到自定义的<a href="components.html#Using-v-on-with-Custom-Events">组件事件</a>上. 如果你还没有阅读关于组件的文档，现在大可不必担心。</p>
+<p>不像其它只能对原生的 DOM 事件起作用的修饰符，<code>.once</code> 修饰符还能被用到自定义的<a href="components.html#使用-v-on-绑定自定义事件">组件事件</a>上. 如果你还没有阅读关于组件的文档，现在大可不必担心。</p>
 <h2 id="键值修饰符"><a href="#键值修饰符" class="headerlink" title="键值修饰符"></a>键值修饰符</h2><p>在监听键盘事件时，我们经常需要监测常见的键值。 Vue 允许为 <code>v-on</code> 在监听键盘事件时添加关键修饰符：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 只有在 keyCode 是 13 时调用 vm.submit() --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">v-on:keyup.13</span>=<span class="string">"submit"</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>记住所有的 keyCode 比较困难，所以 Vue 为最常用的按键提供了别名：</p>
