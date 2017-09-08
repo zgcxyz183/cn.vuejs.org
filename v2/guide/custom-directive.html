@@ -814,7 +814,7 @@ new Vue({
 <li><strong>modifiers</strong>: 一个包含修饰符的对象。 例如： <code>v-my-directive.foo.bar</code>, 修饰符对象 modifiers 的值是 <code>{ foo: true, bar: true }</code>。</li>
 </ul>
 </li>
-<li><strong>vnode</strong>: Vue 编译生成的虚拟节点，查阅 <a href="../api/#VNode接口">VNode API</a> 了解更多详情。</li>
+<li><strong>vnode</strong>: Vue 编译生成的虚拟节点，查阅 <a href="../api/#VNode-接口">VNode API</a> 了解更多详情。</li>
 <li><strong>oldVnode</strong>: 上一个虚拟节点，仅在 <code>update</code> 和 <code>componentUpdated</code> 钩子中可用。</li>
 </ul>
 <p class="tip">除了 <code>el</code> 之外，其它参数都应该是只读的，尽量不要修改他们。如果需要在钩子之间共享数据，建议通过元素的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset" target="_blank" rel="external">dataset</a> 来进行。</p>
