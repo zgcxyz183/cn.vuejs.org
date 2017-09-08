@@ -775,9 +775,9 @@
 <li>将在可预见的未来保留支持</li>
 </ul>
 <p>然而它们的目标用户稍微有所不同。</p>
-<p><strong>Vuex 2.0</strong> 从根本上重新设计并且提供简洁的 API，用于帮助正在开始一个新项目的用户，或想要用客户端状态管理前沿技术的用户。<strong>此迁移指南不涵盖 Vuex 2.0 相关内容</strong>，因此如果你想了解更多，请查阅 <a href="https://vuex.vuejs.org/en/index.html" target="_blank" rel="external">Vuex 2.0 文档</a>。</p>
-<p><strong>Vuex 1.0</strong> 主要是向下兼容，所以升级只需要很小的改动。推荐拥有大量现存代码库的用户，或只想尽可能平滑升级 Vue 2.0 的用户。这份指南致力促进这一过程，但仅包括迁移说明。完整使用指南请查阅 <a href="https://github.com/vuejs/vuex/tree/1.0/docs/en" target="_blank" rel="external">Vuex 1.0 文档</a>。</p>
-<h2 id="带字符串属性路径的-store-watch-替换"><a href="#带字符串属性路径的-store-watch-替换" class="headerlink" title="带字符串属性路径的 store.watch 替换"></a>带字符串属性路径的 <code>store.watch</code> <sup>替换</sup></h2><h2 id="传入字符串属性路径的-store-watch-废弃"><a href="#传入字符串属性路径的-store-watch-废弃" class="headerlink" title="传入字符串属性路径的 store.watch 废弃"></a>传入字符串属性路径的 <code>store.watch</code> <sup>废弃</sup></h2><p><code>store.watch</code> 现在只接受函数。因此，下面例子你需要替换：</p>
+<p><strong>Vuex 2.0</strong> 从根本上重新设计并且提供简洁的 API，用于帮助正在开始一个新项目的用户，或想要用客户端状态管理前沿技术的用户。<strong>此迁移指南不涵盖 Vuex 2.0 相关内容</strong>，因此如果你想了解更多，请查阅 <a href="https://vuex.vuejs.org/zh-cn/" target="_blank" rel="external">Vuex 2.0 文档</a>。</p>
+<p><strong>Vuex 1.0</strong> 主要是向下兼容，所以升级只需要很小的改动。推荐拥有大量现存代码库的用户，或只想尽可能平滑升级 Vue 2.0 的用户。这份指南致力促进这一过程，但仅包括迁移说明。完整使用指南请查阅 <a href="https://github.com/vuejs/vuex/tree/1.0/docs/zh-cn" target="_blank" rel="external">Vuex 1.0 文档</a>。</p>
+<h2 id="带字符串属性路径的-store-watch-替换"><a href="#带字符串属性路径的-store-watch-替换" class="headerlink" title="带字符串属性路径的 store.watch 替换"></a>带字符串属性路径的 <code>store.watch</code> <sup>替换</sup></h2><p><code>store.watch</code> 现在只接受函数。因此，下面例子你需要替换：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">store.watch(<span class="string">'user.notifications'</span>, callback)</div></pre></td></tr></table></figure>
 <p>为：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">store.watch(</div><div class="line">  <span class="comment">// 当返回结果改变...</span></div><div class="line">  <span class="function"><span class="keyword">function</span> (<span class="params">state</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> state.user.notifications</div><div class="line">  &#125;,</div><div class="line">  <span class="comment">// 执行回调函数</span></div><div class="line">  callback</div><div class="line">)</div></pre></td></tr></table></figure>

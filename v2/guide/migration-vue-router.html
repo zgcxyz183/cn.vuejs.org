@@ -767,7 +767,7 @@
     
     
     <blockquote>
-<p>只有 Vue Router 2 是与 Vue 2 相互兼容的，所以如果你更新了 Vue ，你也需要更新 Vue Router 。这也是我们在主文档中将迁移路径的详情添加进来的原因。<br>有关使用 Vue Router 2 的完整教程，请参阅 <a href="http://router.vuejs.org/en/" target="_blank" rel="external"> Vue Router 文档</a>。</p>
+<p>只有 Vue Router 2 是与 Vue 2 相互兼容的，所以如果你更新了 Vue ，你也需要更新 Vue Router 。这也是我们在主文档中将迁移路径的详情添加进来的原因。<br>有关使用 Vue Router 2 的完整教程，请参阅 <a href="https://router.vuejs.org/zh-cn/" target="_blank" rel="external">Vue Router 文档</a>。</p>
 </blockquote>
 <h2 id="Router-初始化"><a href="#Router-初始化" class="headerlink" title="Router 初始化"></a>Router 初始化</h2><h3 id="router-start-替换"><a href="#router-start-替换" class="headerlink" title="router.start 替换"></a><code>router.start</code> <sup>替换</sup></h3><p>不再会有一个特殊的 API 用来初始化包含 Vue Router 的 app ，这意味着不再是：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">router.start(&#123;</div><div class="line">  <span class="attr">template</span>: <span class="string">'&lt;router-view&gt;&lt;/router-view&gt;'</span></div><div class="line">&#125;, <span class="string">'#app'</span>)</div></pre></td></tr></table></figure>
@@ -805,14 +805,14 @@
 <h3 id="router-beforeEach-changed"><a href="#router-beforeEach-changed" class="headerlink" title="router.beforeEach changed"></a><code>router.beforeEach</code> <sup>changed</sup></h3><p><code>router.beforeEach</code> 现在是异步工作的，并且携带一个 <code>next</code> 函数作为其第三个参数。</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">router.beforeEach(<span class="function"><span class="keyword">function</span> (<span class="params">transition</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (transition.to.path === <span class="string">'/forbidden'</span>) &#123;</div><div class="line">    transition.abort()</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    transition.next()</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">router.beforeEach(<span class="function"><span class="keyword">function</span> (<span class="params">to, from, next</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (to.path === <span class="string">'/forbidden'</span>) &#123;</div><div class="line">    next(<span class="literal">false</span>)</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    next()</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<h3 id="subRoutes-换名"><a href="#subRoutes-换名" class="headerlink" title="subRoutes 换名"></a><code>subRoutes</code> <sup>换名</sup></h3><p>出于 Vue Router 和其他路由库一致性的考虑，重命名为<a href="http://router.vuejs.org/en/essentials/nested-routes.html" target="_blank" rel="external"><code>children</code></a></p>
+<h3 id="subRoutes-换名"><a href="#subRoutes-换名" class="headerlink" title="subRoutes 换名"></a><code>subRoutes</code> <sup>换名</sup></h3><p>出于 Vue Router 和其他路由库一致性的考虑，重命名为<a href="https://router.vuejs.org/zh-cn/essentials/nested-routes.html" target="_blank" rel="external"><code>children</code></a></p>
 
 <div class="upgrade-path">
   <h4>升级路径</h4>
   <p>运行 <a href="https://github.com/vuejs/vue-migration-helper" target="_blank" rel="external">迁移助手</a> 找到 <code>subRoutes</code> 选项的示例。</p>
 </div>
 
-<h3 id="router-redirect-替换"><a href="#router-redirect-替换" class="headerlink" title="router.redirect 替换"></a><code>router.redirect</code> <sup>替换</sup></h3><p>现在用一个<a href="http://router.vuejs.org/en/essentials/redirect-and-alias.html" target="_blank" rel="external">路由定义的选项</a>作为代替。 举个例子，你将会更新：</p>
+<h3 id="router-redirect-替换"><a href="#router-redirect-替换" class="headerlink" title="router.redirect 替换"></a><code>router.redirect</code> <sup>替换</sup></h3><p>现在用一个<a href="https://router.vuejs.org/zh-cn/essentials/redirect-and-alias.html" target="_blank" rel="external">路由定义的选项</a>作为代替。 举个例子，你将会更新：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">router.redirect(&#123;</div><div class="line">  <span class="string">'/tos'</span>: <span class="string">'/terms-of-service'</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>成像下面的<code>routes</code>配置里定义的样子：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">path</span>: <span class="string">'/tos'</span>,</div><div class="line">  <span class="attr">redirect</span>: <span class="string">'/terms-of-service'</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -822,7 +822,7 @@
   <p>运行 <a href="https://github.com/vuejs/vue-migration-helper" target="_blank" rel="external">迁移助手</a> 找到 <code>router.redirect</code> 被调用的示例。</p>
 </div>
 
-<h3 id="router-alias-替换"><a href="#router-alias-替换" class="headerlink" title="router.alias 替换"></a><code>router.alias</code> <sup>替换</sup></h3><p>现在是你进行 alias 操作的<a href="http://router.vuejs.org/en/essentials/redirect-and-alias.html" target="_blank" rel="external">路由定义里的一个选项</a>。举个例子，你需要在你的<code>routes</code>定义里将：</p>
+<h3 id="router-alias-替换"><a href="#router-alias-替换" class="headerlink" title="router.alias 替换"></a><code>router.alias</code> <sup>替换</sup></h3><p>现在是你进行 alias 操作的<a href="https://router.vuejs.org/zh-cn/essentials/redirect-and-alias.html" target="_blank" rel="external">路由定义里的一个选项</a>。举个例子，你需要在你的<code>routes</code>定义里将：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">router.alias(&#123;</div><div class="line">  <span class="string">'/manage'</span>: <span class="string">'/admin'</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>配置这个样子：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">path</span>: <span class="string">'/admin'</span>,</div><div class="line">  <span class="attr">component</span>: AdminPanel,</div><div class="line">  <span class="attr">alias</span>: <span class="string">'/manage'</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -856,7 +856,7 @@
   <p>运行 <a href="https://github.com/vuejs/vue-migration-helper" target="_blank" rel="external">迁移助手</a> 找到弃用路由语法的示例。</p>
 </div>
 
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><h3 id="v-link-替换"><a href="#v-link-替换" class="headerlink" title="v-link 替换"></a><code>v-link</code> <sup>替换</sup></h3><p><code>v-link</code>指令已经被一个新的<a href="http://router.vuejs.org/en/api/router-link.html" target="_blank" rel="external"><code>&lt;router-link&gt;</code> 组件</a>指令替代，这一部分的工作已经被 Vue 2 中的组件完成。这将意味着在任何情况下，如果你拥有这样一个链接：</p>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><h3 id="v-link-替换"><a href="#v-link-替换" class="headerlink" title="v-link 替换"></a><code>v-link</code> <sup>替换</sup></h3><p><code>v-link</code> 指令已经被一个新的 <a href="https://router.vuejs.org/zh-cn/api/router-link.html" target="_blank" rel="external"><code>&lt;router-link&gt;</code> 组件</a>指令替代，这一部分的工作已经被 Vue 2 中的组件完成。这将意味着在任何情况下，如果你拥有这样一个链接：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">v-link</span>=<span class="string">"'/about'"</span>&gt;</span>About<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>你需要把它更新成：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">router-link</span> <span class="attr">to</span>=<span class="string">"/about"</span>&gt;</span>About<span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -867,7 +867,7 @@
   <p>运行 <a href="https://github.com/vuejs/vue-migration-helper" target="_blank" rel="external">迁移助手</a> 找到 <code>v-link</code> 指令的示例。</p>
 </div>
 
-<h3 id="v-link-active-替换"><a href="#v-link-active-替换" class="headerlink" title="v-link-active 替换"></a><code>v-link-active</code> <sup>替换</sup></h3><p><code>v-link-active</code>也因为指定了一个在<a href="http://router.vuejs.org/en/api/router-link.html" target="_blank" rel="external"> <code>&lt;router-link&gt;</code> 组件</a>上的 tag 属性而被弃用了。举个例子，你需要更新：</p>
+<h3 id="v-link-active-替换"><a href="#v-link-active-替换" class="headerlink" title="v-link-active 替换"></a><code>v-link-active</code> <sup>替换</sup></h3><p><code>v-link-active</code> 也因为指定了一个在 <a href="https://router.vuejs.org/zh-cn/api/router-link.html" target="_blank" rel="external"><code>&lt;router-link&gt;</code> 组件</a>上的 tag 属性而被弃用了。举个例子，你需要更新：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">li</span> <span class="attr">v-link-active</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">v-link</span>=<span class="string">"'/about'"</span>&gt;</span>About<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>成这个写法:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">router-link</span> <span class="attr">tag</span>=<span class="string">"li"</span> <span class="attr">to</span>=<span class="string">"/about"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">a</span>&gt;</span>About<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -912,7 +912,7 @@
   <p>运行 <a href="https://github.com/vuejs/vue-migration-helper" target="_blank" rel="external">迁移助手</a> 找到 <code>abstract: true</code> 选项的示例。</p>
 </div>
 
-<h2 id="路由选项：Misc"><a href="#路由选项：Misc" class="headerlink" title="路由选项：Misc"></a>路由选项：Misc</h2><h3 id="saveScrollPosition-替换"><a href="#saveScrollPosition-替换" class="headerlink" title="saveScrollPosition 替换"></a><code>saveScrollPosition</code> <sup>替换</sup></h3><p>它已经被替换为可以接受一个函数的<a href="http://router.vuejs.org/en/advanced/scroll-behavior.html" target="_blank" rel="external"><code>scrollBehavior</code> 选项</a>，所以滑动行为可以完全的被定制化处理 - 甚至为每次路由进行定制也可以满足。这将会开启很多新的可能，但是简单的复制旧的行为:</p>
+<h2 id="路由选项：Misc"><a href="#路由选项：Misc" class="headerlink" title="路由选项：Misc"></a>路由选项：Misc</h2><h3 id="saveScrollPosition-替换"><a href="#saveScrollPosition-替换" class="headerlink" title="saveScrollPosition 替换"></a><code>saveScrollPosition</code> <sup>替换</sup></h3><p>它已经被替换为可以接受一个函数的 <a href="https://router.vuejs.org/zh-cn/advanced/scroll-behavior.html" target="_blank" rel="external"><code>scrollBehavior</code> 选项</a>，所以滑动行为可以完全的被定制化处理 - 甚至为每次路由进行定制也可以满足。这将会开启很多新的可能，但是简单的复制旧的行为:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">saveScrollPosition: <span class="literal">true</span></div></pre></td></tr></table></figure>
 <p>你可以替换为:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">scrollBehavior: <span class="function"><span class="keyword">function</span> (<span class="params">to, from, savedPosition</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> savedPosition || &#123; <span class="attr">x</span>: <span class="number">0</span>, <span class="attr">y</span>: <span class="number">0</span> &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
