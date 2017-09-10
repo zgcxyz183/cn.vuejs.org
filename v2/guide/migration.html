@@ -729,7 +729,7 @@
         
         
         <li>
-            <a href="/v2/guide/join.html" class="sidebar-link">加入Vue.js社区</a>
+            <a href="/v2/guide/join.html" class="sidebar-link">加入 Vue.js 社区</a>
         </li>
     
         
@@ -1275,7 +1275,7 @@ new Vue({
   <p>运行<a href="https://github.com/vuejs/vue-migration-helper" target="_blank" rel="external">迁移工具</a>找到在例如 <code>v-model</code> 的指令中使用过滤器的例子。如果你错过了，则应该会收到<strong>命令行报错</strong>。</p>
 </div>
 
-<h2 id="Slots"><a href="#Slots" class="headerlink" title="Slots"></a>Slots</h2><h3 id="重名的-Slots-移除"><a href="#重名的-Slots-移除" class="headerlink" title="重名的 Slots 移除"></a>重名的 Slots <sup>移除</sup></h3><p>同一模板中的重名 <code>&lt;slot&gt;</code> 已经弃用。当一个 slot 已经被渲染过了，那么就不能在同一模板其它地方被再次渲染了。如果要在不同位置渲染同一内容，可以用prop来传递。</p>
+<h2 id="插槽"><a href="#插槽" class="headerlink" title="插槽"></a>插槽</h2><h3 id="重名的插槽-移除"><a href="#重名的插槽-移除" class="headerlink" title="重名的插槽 移除"></a>重名的插槽 <sup>移除</sup></h3><p>同一模板中的重名 <code>&lt;slot&gt;</code> 已经弃用。当一个插槽已经被渲染过了，那么就不能在同一模板其它地方被再次渲染了。如果要在不同位置渲染同一内容，可以用 prop 来传递。</p>
 
 <div class="upgrade-path">
   <h4>升级方式</h4>
@@ -1286,7 +1286,7 @@ new Vue({
 
 <div class="upgrade-path">
   <h4>升级方式</h4>
-  <p>运行<a href="https://github.com/vuejs/vue-migration-helper" target="_blank" rel="external">迁移工具</a>找到选择slots标签CSS选择器(例如： <code>[slot="my-slot-name"]</code>) 。</p>
+  <p>运行<a href="https://github.com/vuejs/vue-migration-helper" target="_blank" rel="external">迁移工具</a>找到选择 slots 标签 CSS 选择器(例如：<code>[slot="my-slot-name"]</code>) 。</p>
 </div>
 
 <h2 id="特殊属性"><a href="#特殊属性" class="headerlink" title="特殊属性"></a>特殊属性</h2><h3 id="keep-alive-属性-替换"><a href="#keep-alive-属性-替换" class="headerlink" title="keep-alive 属性 替换"></a><code>keep-alive</code> 属性 <sup>替换</sup></h3><p><code>keep-alive</code> 不再是一个特殊属性而是一个包裹组件，类似于  <code>&lt;transition&gt;</code>比如：</p>
@@ -1498,8 +1498,8 @@ new Vue({
 </div>
 
 <h3 id="Vue-partial-移除"><a href="#Vue-partial-移除" class="headerlink" title="Vue.partial 移除"></a><code>Vue.partial</code> <sup>移除</sup></h3><p>Partials 已被移除,取而代之的是更明确的组件之间的数据流–props。除非你正在使用一个部分性能关键型区域，否则建议只使用一个<a href="components.html">normal component</a>来代替。如果你是动态绑定部分的<code>name</code>,您可以使用<a href="components.html#动态组件">dynamic component</a>。</p>
-<p>如果你碰巧在你的应用程序的性能关键部分使用<code>partials</code>，那么你应该升级到<a href="render-function.html#函数化组件">functional components</a>。它们必须在纯JS / JSX文件中（而不是在<code>.vue</code>文件中），并且是无状态的和无实例的，就像<code>partials</code>。这使得渲染极快。</p>
-<p><code>functional components</code>相对于<code>partials</code>一个好处是它们可以更具动态性，因为它们允许您访问JavaScript的全部功能。然而，这是有成本的。如果你从来没有使用过渲染式的组件框架，你可能需要花费更长的时间来学习它们。</p>
+<p>如果你碰巧在你的应用程序的性能关键部分使用 partials，那么你应该升级到<a href="render-function.html#函数式组件">函数式组件</a>。它们必须在纯 JS / JSX 文件中（而不是在 <code>.vue</code> 文件中），并且是无状态的和无实例的，就像 partials。这使得渲染极快。</p>
+<p>函数式组件相对于 partials 一个好处是它们可以更具动态性，因为它们允许您访问 JavaScript 的全部功能。然而，这是有成本的。如果你从来没有使用过渲染式的组件框架，你可能需要花费更长的时间来学习它们。</p>
 
 <div class="upgrade-path">
   <h4>升级方式</h4>

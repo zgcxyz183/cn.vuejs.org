@@ -729,7 +729,7 @@
         
         
         <li>
-            <a href="/v2/guide/join.html" class="sidebar-link">加入Vue.js社区</a>
+            <a href="/v2/guide/join.html" class="sidebar-link">加入 Vue.js 社区</a>
         </li>
     
         
@@ -811,7 +811,7 @@ var example2 = new Vue({
 })
 </script>
 
-<h2 id="内联处理器方法"><a href="#内联处理器方法" class="headerlink" title="内联处理器方法"></a>内联处理器方法</h2><p>除了直接绑定到一个方法，也可以用内联 JavaScript 语句：</p>
+<h2 id="内联处理器里的方法"><a href="#内联处理器里的方法" class="headerlink" title="内联处理器里的方法"></a>内联处理器里的方法</h2><p>除了直接绑定到一个方法，也可以用内联 JavaScript 语句：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"example-3"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">"say('hi')"</span>&gt;</span>Say hi<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">"say('what')"</span>&gt;</span>Say what<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">el</span>: <span class="string">'#example-3'</span>,</div><div class="line">  <span class="attr">methods</span>: &#123;</div><div class="line">    <span class="attr">say</span>: <span class="function"><span class="keyword">function</span> (<span class="params">message</span>) </span>&#123;</div><div class="line">      alert(message)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>结果：</p>

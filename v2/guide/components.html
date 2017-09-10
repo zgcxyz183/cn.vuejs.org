@@ -729,7 +729,7 @@
         
         
         <li>
-            <a href="/v2/guide/join.html" class="sidebar-link">加入Vue.js社区</a>
+            <a href="/v2/guide/join.html" class="sidebar-link">加入 Vue.js 社区</a>
         </li>
     
         
@@ -851,7 +851,7 @@ new Vue({
 })
 </script>
 
-<h3 id="构成组件"><a href="#构成组件" class="headerlink" title="构成组件"></a>构成组件</h3><p>组件意味着协同工作，通常父子组件会是这样的关系：组件 A 在它的模板中使用了组件 B。它们之间必然需要相互通信：父组件要给子组件传递数据，子组件需要将它内部发生的事情告知给父组件。然而，在一个良好定义的接口中尽可能将父子组件解耦是很重要的。这保证了每个组件可以在相对隔离的环境中书写和理解，也大幅提高了组件的可维护性和可重用性。</p>
+<h3 id="组合组件"><a href="#组合组件" class="headerlink" title="组合组件"></a>组合组件</h3><p>组件意味着协同工作，通常父子组件会是这样的关系：组件 A 在它的模板中使用了组件 B。它们之间必然需要相互通信：父组件要给子组件传递数据，子组件需要将它内部发生的事情告知给父组件。然而，在一个良好定义的接口中尽可能将父子组件解耦是很重要的。这保证了每个组件可以在相对隔离的环境中书写和理解，也大幅提高了组件的可维护性和可重用性。</p>
 <p>在 Vue 中，父子组件的关系可以总结为 <strong>props down, events up</strong>。父组件通过 <strong>props</strong> 向下传递数据给子组件，子组件通过 <strong>events</strong> 给父组件发送消息。看看它们是怎么工作的。</p>
 <p style="text-align: center"><br>  <img style="width:300px" src="/images/props-events.png" alt="props down, events up"><br></p>
 
@@ -946,9 +946,9 @@ new Vue({
 </ul>
 <p><code>type</code> 也可以是一个自定义构造器函数，使用 <code>instanceof</code> 检测。</p>
 <p>当 prop 验证失败，Vue 会抛出警告 (如果使用的是开发版本)。注意 props 会在组件实例创建<strong>之前</strong>进行校验，所以在 <code>default</code> 或 <code>validator</code> 函数里，诸如 <code>data</code>、<code>computed</code> 或 <code>methods</code> 等实例属性还无法使用。</p>
-<h2 id="非-Prop-属性"><a href="#非-Prop-属性" class="headerlink" title="非 Prop 属性"></a>非 Prop 属性</h2><p>所谓非 <code>prop</code> 属性，就是它可以直接传入组件，而不需要定义相应的 <code>prop</code>。</p>
-<p>明确给组件定义 <code>prop</code> 是传参的推荐方式，但组件的作者并不总能预见到组件被使用的场景。所以，组件可以接收任意传入的属性，这些属性都会被添加到组件的根元素上。</p>
-<p>例如，第三方组件 <code>bs-date-input</code>，当它要和一个 Bootstrap 插件相互操作时，需要在这个第三方组件的 input 上添加 <code>data-3d-date-picker</code> 属性，这时可以把属性直接添加到组件上 (不需要事先定义 <code>prop</code>)：</p>
+<h2 id="非-Prop-特性"><a href="#非-Prop-特性" class="headerlink" title="非 Prop 特性"></a>非 Prop 特性</h2><p>所谓非 prop 特性，就是它可以直接传入组件，而不需要定义相应的 prop。</p>
+<p>明确给组件定义 props 是传参的推荐方式，但组件的作者并不总能预见到组件被使用的场景。所以，组件可以接收任意传入的特性，这些特性都会被添加到组件的根元素上。</p>
+<p>例如，第三方组件 <code>bs-date-input</code>，当它要和一个 Bootstrap 插件相互操作时，需要在这个第三方组件的 input 上添加 <code>data-3d-date-picker</code> 特性，这时可以把属性直接添加到组件上 (不需要事先定义 <code>prop</code>)：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">bs-date-input</span> <span class="attr">data-3d-date-picker</span>=<span class="string">"true"</span>&gt;</span><span class="tag">&lt;/<span class="name">bs-date-input</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>添加属性 <code>data-3d-date-picker=&quot;true&quot;</code> 之后，它会被自动添加到 <code>bs-date-input</code> 的根元素上</p>
 <h3 id="替换-覆盖现有的特性"><a href="#替换-覆盖现有的特性" class="headerlink" title="替换/覆盖现有的特性"></a>替换/覆盖现有的特性</h3><p>想象一下这是 <code>bs-date-input</code> 的模板：</p>
@@ -1096,7 +1096,7 @@ new Vue({
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// 触发组件 A 中的事件</span></div><div class="line">bus.$emit(<span class="string">'id-selected'</span>, <span class="number">1</span>)</div></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// 在组件 B 创建的钩子中监听事件</span></div><div class="line">bus.$on(<span class="string">'id-selected'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">id</span>) </span>&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>在复杂的情况下，我们应该考虑使用专门的<a href="state-management.html">状态管理模式</a>.</p>
-<h2 id="使用-Slots-分发内容"><a href="#使用-Slots-分发内容" class="headerlink" title="使用 Slots 分发内容"></a>使用 Slots 分发内容</h2><p>在使用组件时，我们常常要像这样组合它们：</p>
+<h2 id="使用插槽分发内容"><a href="#使用插槽分发内容" class="headerlink" title="使用插槽分发内容"></a>使用插槽分发内容</h2><p>在使用组件时，我们常常要像这样组合它们：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">app</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">app-header</span>&gt;</span><span class="tag">&lt;/<span class="name">app-header</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">app-footer</span>&gt;</span><span class="tag">&lt;/<span class="name">app-footer</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">app</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>注意两点：</p>
 <ol>
@@ -1105,7 +1105,7 @@ new Vue({
 <li><p><code>&lt;app&gt;</code> 组件很可能有它自己的模板。</p>
 </li>
 </ol>
-<p>为了让组件可以组合，我们需要一种方式来混合父组件的内容与子组件自己的模板。这个过程被称为 <strong>内容分发</strong> (或 “transclusion” 如果你熟悉 Angular)。Vue.js 实现了一个内容分发 API，参照了当前 <a href="https://github.com/w3c/webcomponents/blob/gh-pages/proposals/Slots-Proposal.md" target="_blank" rel="external">Web 组件规范草案</a>，使用特殊的 <code>&lt;slot&gt;</code> 元素作为原始内容的插槽。</p>
+<p>为了让组件可以组合，我们需要一种方式来混合父组件的内容与子组件自己的模板。这个过程被称为<strong>内容分发</strong> (或“transclusion”如果你熟悉 Angular)。Vue.js 实现了一个内容分发 API，参照了当前 <a href="https://github.com/w3c/webcomponents/blob/gh-pages/proposals/Slots-Proposal.md" target="_blank" rel="external">Web 组件规范草案</a>，使用特殊的 <code>&lt;slot&gt;</code> 元素作为原始内容的插槽。</p>
 <h3 id="编译作用域"><a href="#编译作用域" class="headerlink" title="编译作用域"></a>编译作用域</h3><p>在深入内容分发 API 之前，我们先明确内容在哪个作用域里编译。假定模板为：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">child-component</span>&gt;</span></div><div class="line">  &#123;&#123; message &#125;&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">child-component</span>&gt;</span></div></pre></td></tr></table></figure>
 <p><code>message</code> 应该绑定到父组件的数据，还是绑定到子组件的数据？答案是父组件。组件作用域简单地说是：</p>
@@ -1116,7 +1116,7 @@ new Vue({
 <p>如果要绑定作用域内的指令到一个组件的根节点，你应当在组件自己的模板上做：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.component(<span class="string">'child-component'</span>, &#123;</div><div class="line">  <span class="comment">// 有效，因为是在正确的作用域内</span></div><div class="line">  template: <span class="string">'&lt;div v-show="someChildProperty"&gt;Child&lt;/div&gt;'</span>,</div><div class="line">  <span class="attr">data</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      <span class="attr">someChildProperty</span>: <span class="literal">true</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>类似地，分发内容是在父作用域内编译。</p>
-<h3 id="单个-Slot"><a href="#单个-Slot" class="headerlink" title="单个 Slot"></a>单个 Slot</h3><p>除非子组件模板包含至少一个 <code>&lt;slot&gt;</code> 插口，否则父组件的内容将会被<strong>丢弃</strong>。当子组件模板只有一个没有属性的 slot 时，父组件整个内容片段将插入到 slot 所在的 DOM 位置，并替换掉 slot 标签本身。</p>
+<h3 id="单个插槽"><a href="#单个插槽" class="headerlink" title="单个插槽"></a>单个插槽</h3><p>除非子组件模板包含至少一个 <code>&lt;slot&gt;</code> 插口，否则父组件的内容将会被<strong>丢弃</strong>。当子组件模板只有一个没有属性的插槽时，父组件整个内容片段将插入到插槽所在的 DOM 位置，并替换掉插槽标签本身。</p>
 <p>最初在 <code>&lt;slot&gt;</code> 标签中的任何内容都被视为<strong>备用内容</strong>。备用内容在子组件的作用域内编译，并且只有在宿主元素为空，且没有要插入的内容时才显示备用内容。</p>
 <p>假定 <code>my-component</code> 组件有下面模板：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h2</span>&gt;</span>我是子组件的标题<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">slot</span>&gt;</span></div><div class="line">    只有在没有要分发的内容时才会显示。</div><div class="line">  <span class="tag">&lt;/<span class="name">slot</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -1124,8 +1124,8 @@ new Vue({
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h1</span>&gt;</span>我是父组件的标题<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">my-component</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>这是一些初始内容<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>这是更多的初始内容<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">my-component</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>渲染结果：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h1</span>&gt;</span>我是父组件的标题<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>我是子组件的标题<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>这是一些初始内容<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>这是更多的初始内容<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="具名-Slot"><a href="#具名-Slot" class="headerlink" title="具名 Slot"></a>具名 Slot</h3><p><code>&lt;slot&gt;</code> 元素可以用一个特殊的属性 <code>name</code> 来配置如何分发内容。多个 slot 可以有不同的名字。具名 slot 将匹配内容片段中有对应 <code>slot</code> 特性的元素。</p>
-<p>仍然可以有一个匿名 slot，它是<strong>默认 slot</strong>，作为找不到匹配的内容片段的备用插槽。如果没有默认的 slot，这些找不到匹配的内容片段将被抛弃。</p>
+<h3 id="具名插槽"><a href="#具名插槽" class="headerlink" title="具名插槽"></a>具名插槽</h3><p><code>&lt;slot&gt;</code> 元素可以用一个特殊的属性 <code>name</code> 来配置如何分发内容。多个插槽可以有不同的名字。具名插槽将匹配内容片段中有对应 <code>slot</code> 特性的元素。</p>
+<p>仍然可以有一个匿名插槽，它是<strong>默认插槽</strong>，作为找不到匹配的内容片段的备用插槽。如果没有默认插槽，这些找不到匹配的内容片段将被抛弃。</p>
 <p>例如，假定我们有一个 <code>app-layout</code> 组件，它的模板为：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">header</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">slot</span> <span class="attr">name</span>=<span class="string">"header"</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">header</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">main</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">slot</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">main</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">footer</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">slot</span> <span class="attr">name</span>=<span class="string">"footer"</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">footer</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>父组件模板：</p>

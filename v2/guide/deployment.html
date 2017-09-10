@@ -729,7 +729,7 @@
         
         
         <li>
-            <a href="/v2/guide/join.html" class="sidebar-link">加入Vue.js社区</a>
+            <a href="/v2/guide/join.html" class="sidebar-link">加入 Vue.js 社区</a>
         </li>
     
         
@@ -781,7 +781,7 @@
 <h2 id="预编译模板"><a href="#预编译模板" class="headerlink" title="预编译模板"></a>预编译模板</h2><p>当你需要处理 DOM 内或 JavaScript 内的模板时，“从模板到渲染函数”的编译就会在线上发生。通常情况下这种处理是足够快的，但是如果你的应用对性能很敏感最好还是回避。</p>
 <p>预编译模板最简单的方式就是使用<a href="./single-file-components.html">单文件组件</a> - 相关的构建设置会自动把预编译处理好，所以构建好的代码已经包含了编译出来的渲染函数而不是原始的模板字符串。</p>
 <p>如果你使用 Webpack，并且喜欢分离 JavaScript 和模板文件，你可以使用 <a href="https://github.com/ktsn/vue-template-loader" target="_blank" rel="external">vue-template-loader</a>，它也可以在构建过程中把模板文件转换成为 JavaScript 渲染函数。</p>
-<h2 id="提取-CSS"><a href="#提取-CSS" class="headerlink" title="提取 CSS"></a>提取 CSS</h2><p>当使用单文件组件时，组件内的 CSS 会以 <code>&lt;style&gt;</code> 标签的方式通过 JavaScript 动态注入。这有一些小小的运行时开销，如果你使用服务端渲染，这会导致一段“无样式的内容瞬间 (fouc)”。横跨所有组件提取 CSS 到同一个文件回避这件事情，这也会更好的压缩和缓存 CSS。</p>
+<h2 id="提取组件的-CSS"><a href="#提取组件的-CSS" class="headerlink" title="提取组件的 CSS"></a>提取组件的 CSS</h2><p>当使用单文件组件时，组件内的 CSS 会以 <code>&lt;style&gt;</code> 标签的方式通过 JavaScript 动态注入。这有一些小小的运行时开销，如果你使用服务端渲染，这会导致一段“无样式的内容瞬间 (fouc)”。横跨所有组件提取 CSS 到同一个文件回避这件事情，这也会更好的压缩和缓存 CSS。</p>
 <p>可查阅相关构建工具文档：</p>
 <ul>
 <li><a href="https://vue-loader.vuejs.org/zh-cn/configurations/extract-css.html" target="_blank" rel="external">Webpack + vue-loader</a> (the <code>vue-cli</code> webpack template has this pre-configured</li>

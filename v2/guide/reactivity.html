@@ -729,7 +729,7 @@
         
         
         <li>
-            <a href="/v2/guide/join.html" class="sidebar-link">加入Vue.js社区</a>
+            <a href="/v2/guide/join.html" class="sidebar-link">加入 Vue.js 社区</a>
         </li>
     
         
@@ -771,7 +771,7 @@
 <p>用户看不到 getter/setter，但是在内部它们让 Vue 追踪依赖，在属性被访问和修改时通知变化。这里需要注意的问题是浏览器控制台在打印数据对象时 getter/setter 的格式化并不同，所以你可能需要安装 <a href="https://github.com/vuejs/vue-devtools" target="_blank" rel="external">vue-devtools</a> 来获取更加友好的检查接口。</p>
 <p>每个组件实例都有相应的 <strong>watcher</strong> 实例对象，它会在组件渲染的过程中把属性记录为依赖，之后当依赖项的 <code>setter</code> 被调用时，会通知 <code>watcher</code> 重新计算，从而致使它关联的组件得以更新。</p>
 <p><img src="/images/data.png" alt="data"></p>
-<h2 id="变化检测问题"><a href="#变化检测问题" class="headerlink" title="变化检测问题"></a>变化检测问题</h2><p>受现代 JavaScript 的限制（以及废弃 <code>Object.observe</code>），Vue <strong>不能检测到对象属性的添加或删除</strong>。由于 Vue 会在初始化实例时对属性执行 <code>getter/setter</code> 转化过程，所以属性必须在 <code>data</code> 对象上存在才能让 Vue 转换它，这样才能让它是响应的。例如：</p>
+<h2 id="检测变化的注意事项"><a href="#检测变化的注意事项" class="headerlink" title="检测变化的注意事项"></a>检测变化的注意事项</h2><p>受现代 JavaScript 的限制（以及废弃 <code>Object.observe</code>），Vue <strong>不能检测到对象属性的添加或删除</strong>。由于 Vue 会在初始化实例时对属性执行 <code>getter/setter</code> 转化过程，所以属性必须在 <code>data</code> 对象上存在才能让 Vue 转换它，这样才能让它是响应的。例如：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">data</span>:&#123;</div><div class="line">  <span class="attr">a</span>:<span class="number">1</span></div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// `vm.a` 是响应的</span></div><div class="line"></div><div class="line">vm.b = <span class="number">2</span></div><div class="line"><span class="comment">// `vm.b` 是非响应的</span></div></pre></td></tr></table></figure>
 <p>Vue 不允许在已经创建的实例上动态添加新的根级响应式属性(root-level reactive property)。然而它可以使用 <code>Vue.set(object, key, value)</code> 方法将响应属性添加到嵌套的对象上：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.set(vm.someObject, <span class="string">'b'</span>, <span class="number">2</span>)</div></pre></td></tr></table></figure>

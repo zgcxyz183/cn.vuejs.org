@@ -729,7 +729,7 @@
         
         
         <li>
-            <a href="/v2/guide/join.html" class="sidebar-link">加入Vue.js社区</a>
+            <a href="/v2/guide/join.html" class="sidebar-link">加入 Vue.js 社区</a>
         </li>
     
         
@@ -907,7 +907,7 @@ new Vue({
 <li><code>reverse()</code></li>
 </ul>
 <p>你打开控制台，然后用前面例子的 <code>items</code> 数组调用变异方法：<code>example1.items.push({ message: &#39;Baz&#39; })</code> 。</p>
-<h3 id="重塑数组"><a href="#重塑数组" class="headerlink" title="重塑数组"></a>重塑数组</h3><p>变异方法 (mutation method)，顾名思义，会改变被这些方法调用的原始数组。相比之下，也有非变异 (non-mutating method) 方法，例如：<code>filter()</code>, <code>concat()</code> 和 <code>slice()</code> 。这些不会改变原始数组，但<strong>总是返回一个新数组</strong>。当使用非变异方法时，可以用新数组替换旧数组：</p>
+<h3 id="替换数组"><a href="#替换数组" class="headerlink" title="替换数组"></a>替换数组</h3><p>变异方法 (mutation method)，顾名思义，会改变被这些方法调用的原始数组。相比之下，也有非变异 (non-mutating method) 方法，例如：<code>filter()</code>, <code>concat()</code> 和 <code>slice()</code> 。这些不会改变原始数组，但<strong>总是返回一个新数组</strong>。当使用非变异方法时，可以用新数组替换旧数组：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">example1.items = example1.items.filter(<span class="function"><span class="keyword">function</span> (<span class="params">item</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> item.message.match(<span class="regexp">/Foo/</span>)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>你可能认为这将导致 Vue 丢弃现有 DOM 并重新渲染整个列表。幸运的是，事实并非如此。 Vue 为了使得 DOM 元素得到最大范围的重用而实现了一些智能的、启发式的方法，所以用一个含有相同元素的数组去替换原来的数组是非常高效的操作。</p>
 <h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>由于 JavaScript 的限制，Vue 不能检测以下变动的数组：</p>
